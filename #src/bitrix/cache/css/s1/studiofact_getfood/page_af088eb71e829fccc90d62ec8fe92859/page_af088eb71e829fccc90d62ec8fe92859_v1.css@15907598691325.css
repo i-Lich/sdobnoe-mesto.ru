@@ -1,0 +1,27 @@
+
+
+/* Start:/bitrix/components/bitrix/map.yandex.system/templates/.default/style.css?1590754651666*/
+div.bx-yandex-map {color: black; font-size: 11px;}
+div.bx-yandex-map div.YMaps-b-balloon-content {color: black; font-size: 11px;}
+div.bx-popup-form div.bx-yandex-map div.YMaps-b-balloon-point div.YMaps-b-balloon div.YMaps-b-balloon-wrap table.YMaps-b-balloon-frame td {
+	padding: 0px !important;
+}
+
+
+div.bx-popup-form div.bx-yandex-map div.YMaps-b-balloon-point div.YMaps-b-balloon div.YMaps-b-balloon-wrap table.YMaps-b-balloon-frame td textarea{
+	font-size: 11px;
+}
+
+
+div.bx-popup-form div.bx-yandex-map div.YMaps-b-balloon-point div.YMaps-b-balloon div.YMaps-b-balloon-wrap table.YMaps-b-balloon-frame td.YMaps-b-balloon-b {
+	background-image: none !important;
+}
+
+/* End */
+
+
+/* Start:/bitrix/components/bitrix/main.feedback/templates/.default/style.min.css?1590754674251*/
+div.mf-name,div.mf-email,div.mf-captcha,div.mf-message{width:80%;padding-bottom:.4em}div.mf-name input,div.mf-email input{width:60%}div.mf-message textarea{width:60%}span.mf-req{color:red}div.mf-ok-text{color:green;font-weight:bold;padding-bottom:1em}
+/* End */
+/* /bitrix/components/bitrix/map.yandex.system/templates/.default/style.css?1590754651666 */
+/* /bitrix/components/bitrix/main.feedback/templates/.default/style.min.css?1590754674251 */

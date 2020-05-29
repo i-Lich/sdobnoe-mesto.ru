@@ -1,0 +1,12 @@
+#jstore-css #lsp-block-content .lsp-block-register,
+#jstore-css #lsp-block-content .lsp-block-auth{
+  label{
+    .label-row-field{
+      input{
+        border: 0;
+        background-color: $lessGrayColor;
+        border-left: 2px solid $mainColor;
+      }
+    }
+  }
+}

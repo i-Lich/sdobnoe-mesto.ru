@@ -1,0 +1,41 @@
+#jstore-css .lsp-js-delivery-type-cont input{
+  min-width: 40px;
+}
+#jstore-css #lsp-block-order-form .lsp-js-form-field-payment_type_CASH_sum span.label-row-text{
+  margin-right: 10px;
+}
+#jstore-css #lsp-block-order-form{
+  .js-terminal-on-map,
+  .label-row-text-info{
+    display: none;
+  }
+  .lsp-js-form-field-userAgreement{
+    .label-row-field{
+      font-size: 16px;
+      input{
+        vertical-align: middle;
+      }
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+  input,
+  textarea,
+  select{
+    border: 0;
+    border-left: 2px solid $mainColor;
+    background-color: $lessGrayColor;
+  }
+}
+@media (max-width: 610px) {
+  #jstore-css #lsp-block-content .lsp-form .label-row-field-select:after {
+    top: 28px;
+  }
+  #jstore-css #lsp-block-content .lsp-form .label-row-text{
+    width: auto;
+  }
+  #jstore-css #lsp-block-content .lsp-block-order-sum-item{
+    padding-left: 10px;
+  }
+}

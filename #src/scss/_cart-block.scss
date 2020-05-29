@@ -1,0 +1,37 @@
+#jstore-css #lsp-block-content .lsp-block-cartpage-inner{
+  width: 75%;
+  margin: 0 auto;
+  font-weight: 400;
+  .lsp-block-cartpage-items{
+    th{
+      font-weight: 800;
+    }
+    .lsp-block-cart-item{
+      .lsp-delete-item{
+        background-size: contain;
+        background-image: url(../images/close.png);
+
+        width: 15px;
+        height: 15px;
+
+      }
+      .lsp-cartblock-amount-cont{
+        width: 120px;
+        padding: 10px;
+        text-align: left;
+      }
+      .lsp-cartblock-title{
+        font-weight: 400;
+      }
+      .lsp-block-cartblock-item-price-c-count{
+        font-weight: 800;
+        color: $mainColor;
+      }
+    }
+  }
+  .jstore-cart-total,
+  .lsp-block-cart-total{
+    font-weight: 800;
+    color: $mainColor;
+  }
+}

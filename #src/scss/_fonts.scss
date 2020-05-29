@@ -1,0 +1,8 @@
+$mainFont: 'ComicSansMS', sans-serif;
+$secondFont: 'ComicSansMS', sans-serif;
+$textFont: 'ComicSansMS', sans-serif;
+
+.jstore-tag,
+.jstore-tag.lsp-block-cart .lsp-info-message-bottom{
+  font-family: $mainFont;
+}
