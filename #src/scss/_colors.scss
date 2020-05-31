@@ -164,11 +164,16 @@
   color: $whiteColor;
   background-color: $mainColor;
 }
-.jstore-tag.lsp-block-menu-tree li a.child-selected,
-.jstore-tag.lsp-block-menu-tree li a.selected,
-.jstore-tag.lsp-block-menu-tree li a:hover {
-  color: $hoverColor;
+
+#jstore-css .lsp-block-menu-tree li a:hover {
+  color: #8e8e8e ;
 }
+
+#jstore-css .lsp-block-menu-tree li a.child-selected,
+#jstore-css .lsp-block-menu-tree li a.selected{
+  color: $hoverColor ;
+}
+
 #lsp-block-content .lsp-block-orders-list-status,
 #jstore-css .jstore-block .lsp-block-orders-list-status,
 .jstore-tag .lsp-block-orders-list-status{
@@ -343,7 +348,8 @@
   background: $grayColor !important;
 }
 #lsp-block-gift .lsp-block-gift-item-name{
-  color: $whiteColor;
+  color: $textColor;
+  margin-bottom: 5px;
 }
 #lsp-block-happy-hour .lsp-block-hh-product-old-price{
   color: $moreGrayColor;

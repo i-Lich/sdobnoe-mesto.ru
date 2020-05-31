@@ -575,35 +575,30 @@
   #lsp-block-gift{
     display: flex;
     flex: 0 1 100%;
-    padding: 16px 10px 18px 18px;
-    margin: 0 0 24px 0;
-    border: 1px solid #efefef;
-    background: $whiteColor;
-    border-radius: 8px;
+
     .lsp-block-gift-inner{
-      background: $whiteColor;
-      padding: 0;
+      padding: 16px 10px 18px 18px;
+      border: 1px solid #efefef;
+      margin: 0;
+      border-radius: 8px;
+      background: #ffffff;
       width: 100%;
-      border: 0;
       .lsp-block-gift-title{
-        margin: 0 0 5px 0;
+        margin: 0 0 10px 0;
       }
     }
   }
   #lsp-block-happy-hour{
     display: flex;
     flex: 0 1 100%;
-    padding: 16px 10px 18px 18px;
-    margin: 0 0 24px 0;
-    border: 1px solid #efefef;
-    background: #ffffff;
-    border-radius: 8px;
+
     .lsp-block-hh-inner{
-      padding: 0;
-      margin: 0;
+      padding: 16px 10px 18px 18px;
+      margin: 0 0 24px 0;
+      border: 1px solid #efefef;
+      background: #ffffff;
+      border-radius: 8px;
       width: 100%;
-      border: 0;
-      background-color: $whiteColor;
     }
   }
   .nav-menu,
@@ -722,49 +717,77 @@
 
 .nav-menu{
   width: 100%;
+  border-radius: 12px;
 }
 
 a.all-menu{
   //width: 100%;
+  border-radius: 12px 12px 0 0;
   width: 100%;
   background-color: $lessGrayColor;
   font-family: $mainFont;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 16px;
-  padding: 12px 10px;
+  font-size: 14px;
+  padding: 18px 30px 13px 30px;
   color: $textColor;
-
-  border-left: 2px solid $mainColor;
 }
 
 #jstore-css .content-left-side #lsp-block-tree{
+  border-radius: 0 0 15px 15px;
   margin: 0 0 15px 0;
   background: $lessGrayColor;
+  //padding: 18px 30px 13px 30px;
   ul{
     min-height: 0;
-    margin-bottom: 5px;
   }
 }
 
 #lsp-block-tree li{
   margin: 0;
-  padding: 0;
+  //padding: 0;
+  cursor: pointer;
+  border-top: 1px solid #ededed;
+  a{
+    padding: 18px 30px 13px 30px;
+  }
+  ul.lsp-js-menu-childs{
+    margin: 0;
+    li{
+      padding: 0;
+      background-color: #ededed;
+      border-color: #f6f6f6;
+      a{
+        &:hover{
+          text-decoration: underline;
+        }
+        //padding: 18px 30px 13px 35px;
+      }
+      &:first-child{
+        border-color: #ededed;
+      }
+      ul.lsp-js-menu-childs{
+        li{
+          background-color: #f5f5f5;
+          a{
+            font-size: 12px;
+            padding: 18px 30px 13px 40px;
+          }
+        }
+      }
+    }
+  }
   &:before{
     content: '';
   }
-  a{
-    border-left: 2px solid $mainColor;
-    //border-right: 2px solid $transparent;
-    padding: 5px 0 5px 15px;
-  }
+
 }
 #lsp-block-tree li a:hover{
-  border-color: $mainColor;
+  //color: #8e8e8e;
 }
 
 #jstore-css .nav-menu a.all-menu:hover{
-  color: $hoverColor;
+  color: #8e8e8e;
 }
 
 // Items list
@@ -906,7 +929,8 @@ a.all-menu{
       }
 
       img{
-        object-fit: contain;
+        object-fit: cover;
+        border-radius: 5% 5% 0 0;
         max-width: none;
         width: 100%;
         min-height: 240px;

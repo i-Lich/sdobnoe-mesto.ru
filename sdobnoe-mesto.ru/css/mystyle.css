@@ -207,9 +207,12 @@
   background-color: #f1281e;
 }
 
-.jstore-tag.lsp-block-menu-tree li a.child-selected,
-.jstore-tag.lsp-block-menu-tree li a.selected,
-.jstore-tag.lsp-block-menu-tree li a:hover {
+#jstore-css .lsp-block-menu-tree li a:hover {
+  color: #8e8e8e;
+}
+
+#jstore-css .lsp-block-menu-tree li a.child-selected,
+#jstore-css .lsp-block-menu-tree li a.selected {
   color: #9e120a;
 }
 
@@ -425,7 +428,8 @@
 }
 
 #lsp-block-gift .lsp-block-gift-item-name {
-  color: #ffffff;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 #lsp-block-happy-hour .lsp-block-hh-product-old-price {
@@ -567,7 +571,11 @@ h1 {
 }
 
 .jstore-tag.h1 {
-  margin: 15px 0 15px 0;
+  margin: 8px 0 8px 0;
+}
+
+.jstore-tag.h1:first-child {
+  margin: 16px 0 8px 0;
 }
 
 /* Grouping content
@@ -1004,7 +1012,7 @@ body {
 }
 
 #lsp-block-popup .lsp-block-items-popup .lsp-popup-item-image img {
-  object-fit: contain;
+  object-fit: cover;
   max-width: none;
   width: 100%;
   min-height: 300px;
@@ -1641,40 +1649,33 @@ body {
 #jstore-css .content-left-side #lsp-block-gift {
   display: flex;
   flex: 0 1 100%;
-  padding: 16px 10px 18px 18px;
-  margin: 0 0 24px 0;
-  border: 1px solid #efefef;
-  background: #ffffff;
-  border-radius: 8px;
 }
 
 #jstore-css .content-left-side #lsp-block-gift .lsp-block-gift-inner {
+  padding: 16px 10px 18px 18px;
+  border: 1px solid #efefef;
+  margin: 0;
+  border-radius: 8px;
   background: #ffffff;
-  padding: 0;
   width: 100%;
-  border: 0;
 }
 
 #jstore-css .content-left-side #lsp-block-gift .lsp-block-gift-inner .lsp-block-gift-title {
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 #jstore-css .content-left-side #lsp-block-happy-hour {
   display: flex;
   flex: 0 1 100%;
+}
+
+#jstore-css .content-left-side #lsp-block-happy-hour .lsp-block-hh-inner {
   padding: 16px 10px 18px 18px;
   margin: 0 0 24px 0;
   border: 1px solid #efefef;
   background: #ffffff;
   border-radius: 8px;
-}
-
-#jstore-css .content-left-side #lsp-block-happy-hour .lsp-block-hh-inner {
-  padding: 0;
-  margin: 0;
   width: 100%;
-  border: 0;
-  background-color: #ffffff;
 }
 
 #jstore-css .content-left-side .nav-menu,
@@ -1787,50 +1788,74 @@ body {
 
 .nav-menu {
   width: 100%;
+  border-radius: 12px;
 }
 
 a.all-menu {
+  border-radius: 12px 12px 0 0;
   width: 100%;
   background-color: #e5e5e5;
   font-family: "ComicSansMS", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 16px;
-  padding: 12px 10px;
+  font-size: 14px;
+  padding: 18px 30px 13px 30px;
   color: #333;
-  border-left: 2px solid #f1281e;
 }
 
 #jstore-css .content-left-side #lsp-block-tree {
+  border-radius: 0 0 15px 15px;
   margin: 0 0 15px 0;
   background: #e5e5e5;
 }
 
 #jstore-css .content-left-side #lsp-block-tree ul {
   min-height: 0;
-  margin-bottom: 5px;
 }
 
 #lsp-block-tree li {
   margin: 0;
+  cursor: pointer;
+  border-top: 1px solid #ededed;
+}
+
+#lsp-block-tree li a {
+  padding: 18px 30px 13px 30px;
+}
+
+#lsp-block-tree li ul.lsp-js-menu-childs {
+  margin: 0;
+}
+
+#lsp-block-tree li ul.lsp-js-menu-childs li {
   padding: 0;
+  background-color: #ededed;
+  border-color: #f6f6f6;
+}
+
+#lsp-block-tree li ul.lsp-js-menu-childs li a:hover {
+  text-decoration: underline;
+}
+
+#lsp-block-tree li ul.lsp-js-menu-childs li:first-child {
+  border-color: #ededed;
+}
+
+#lsp-block-tree li ul.lsp-js-menu-childs li ul.lsp-js-menu-childs li {
+  background-color: #f5f5f5;
+}
+
+#lsp-block-tree li ul.lsp-js-menu-childs li ul.lsp-js-menu-childs li a {
+  font-size: 12px;
+  padding: 18px 30px 13px 40px;
 }
 
 #lsp-block-tree li:before {
   content: '';
 }
 
-#lsp-block-tree li a {
-  border-left: 2px solid #f1281e;
-  padding: 5px 0 5px 15px;
-}
-
-#lsp-block-tree li a:hover {
-  border-color: #f1281e;
-}
-
 #jstore-css .nav-menu a.all-menu:hover {
-  color: #9e120a;
+  color: #8e8e8e;
 }
 
 #jstore-css #lsp-block-content .jstore-tag.lsp-block-tags-filter {
@@ -1962,7 +1987,8 @@ a.all-menu {
 }
 
 #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-image .lsp-block-item-image-link img {
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 5% 5% 0 0;
   max-width: none;
   width: 100%;
   min-height: 240px;
