@@ -1067,6 +1067,46 @@ body {
   right: 30px;
 }
 
+#header .header_menu .user_auth #lsp-block-userinfo--header {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+#header .header_menu .user_auth #lsp-block-userinfo--header .lsp-block-userinfo-inner {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+#header .header_menu .user_auth #lsp-block-userinfo--header .lsp-block-userinfo-inner .lsp-block-userinfo-appeal {
+  display: none;
+}
+
+#header .header_menu .user_auth #lsp-block-userinfo--header .lsp-block-userinfo-inner :first-child + a {
+  background: url(http://sdobnoe-mesto.ru/bitrix/templates/studiofact_getfood/images/sprite.png) no-repeat;
+  background-position: 0 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 30px;
+  padding-left: 30px;
+}
+
+#header .header_menu .user_auth #lsp-block-userinfo--header .lsp-block-userinfo-inner :first-child + a:hover {
+  background-position: -26px 0;
+}
+
+#header .header_menu .user_auth #lsp-block-userinfo--header .lsp-block-userinfo-inner a {
+  margin: 0 0 0 33px;
+  text-decoration: none;
+}
+
+#header .header_menu .user_auth #lsp-block-userinfo--header .lsp-block-userinfo-inner a :hover::before {
+  display: none !important;
+}
+
 .header .jstore-block-search .jstore-block-search-inner {
   border: 0;
   padding: 0;
@@ -1128,6 +1168,10 @@ body {
   padding: 27px 45px 28px 60px;
   margin: 0 4px 0 0;
   cursor: pointer;
+}
+
+.header #small_basket_box:hover {
+  background: #ededed;
 }
 
 .header #small_basket_box:hover #lsp-block-cart--header {
@@ -1801,7 +1845,7 @@ a.all-menu {
   display: flex;
   align-self: flex-start;
   padding: 0 0 0 15px;
-  flex-grow: 1;
+  flex-grow: 0;
   justify-content: center;
   min-height: 37px;
   margin: 1rem 0 1rem 0;
