@@ -116,11 +116,11 @@
 		<script type="text/javascript">
 			window.jStoreConfig = {
 				//jstore
-				// 'restaurant': "3f46ac68-54f4-4ea5-84c1-b7db224a544e",
+				'restaurant': "3f46ac68-54f4-4ea5-84c1-b7db224a544e",
 				//mesto
-				// 'restaurant': "f3ddc282-177e-11e9-90ed-6cb3110f5fe6",
+
 				//che
-				'restaurant': "f3ddc282-177e-11e9-90ed-6cb3110f5fe6",
+				// 'restaurant': "f3ddc282-177e-11e9-90ed-6cb3110f5fe6",
 				'server': {
 					'url': 'https://deliverywiget.iiko.ru'
 				},
@@ -138,6 +138,7 @@
 			};
 		</script>
 		<script data-main="https://deliverywiget.iiko.ru/v2_0/app/config" src="https://deliverywiget.iiko.ru/v2_0/libs/require.js"></script>
+		<script src="js/script.js"></script>
 
 		<!--	//end iiko delivery-->
 
@@ -295,36 +296,9 @@
 
 							</div>
 							<div id="small_basket_box" class="fr" data-path="/include/buy_one_click.php">
-								<script>
-var bx_basketFKauiI = new BitrixSmallCart;
-$(document).ready(function () {
-    basketId = bx_basketFKauiI;
-    $(".btn-sm").click(function () {
-        basketId.refreshCart({});
-    });
-});
-</script>
-<div id="bx_basketFKauiI" class="bx-basket bx-opener">    <span id="small_basket" class="fr">
-    <span class="mobile"><span class="icon inline">0</span></span>
-    <span class="desktop">
-		<span class="icon inline">0</span>        <span id="cart_heading_wrapper cart_heading_wrapper2" class="cart_heading_wrapper">
-			<span class="text inline">Корзина</span>
-            <span class="summ inline"></span>            <span class="clear"></span>
-		</span>
-	</span>
-    </span>
-
-</div>
-<script type="text/javascript">
-	bx_basketFKauiI.siteId       = 's1';
-	bx_basketFKauiI.cartId       = 'bx_basketFKauiI';
-	bx_basketFKauiI.ajaxPath     = '/bitrix/components/bitrix/sale.basket.basket.line/ajax.php';
-	bx_basketFKauiI.templateName = '.default';
-	bx_basketFKauiI.arParams     =  {'PATH_TO_BASKET':'/personal/cart/','SHOW_PRODUCTS':'Y','POSITION_FIXED':'N','SHOW_PERSONAL_LINK':'N','SHOW_PRICE':'Y','SHOW_SUBSCRIBE':'Y','SHOW_SUMMARY':'Y','SHOW_TOTAL_PRICE':'Y','COMPONENT_TEMPLATE':'.default','PATH_TO_ORDER':'/personal/order/make/','SHOW_NUM_PRODUCTS':'Y','SHOW_EMPTY_VALUES':'Y','PATH_TO_PERSONAL':'/personal/','SHOW_AUTHOR':'N','PATH_TO_REGISTER':'/login/','PATH_TO_AUTHORIZE':'/login/','PATH_TO_PROFILE':'/personal/','SHOW_DELAY':'N','SHOW_NOTAVAIL':'N','SHOW_IMAGE':'Y','POSITION_HORIZONTAL':'right','POSITION_VERTICAL':'top','HIDE_ON_BASKET_PAGES':'N','CACHE_TYPE':'A','SHOW_REGISTRATION':'N','MAX_IMAGE_SIZE':'70','AJAX':'N','~PATH_TO_BASKET':'/personal/cart/','~SHOW_PRODUCTS':'Y','~POSITION_FIXED':'N','~SHOW_PERSONAL_LINK':'N','~SHOW_PRICE':'Y','~SHOW_SUBSCRIBE':'Y','~SHOW_SUMMARY':'Y','~SHOW_TOTAL_PRICE':'Y','~COMPONENT_TEMPLATE':'.default','~PATH_TO_ORDER':'/personal/order/make/','~SHOW_NUM_PRODUCTS':'Y','~SHOW_EMPTY_VALUES':'Y','~PATH_TO_PERSONAL':'/personal/','~SHOW_AUTHOR':'N','~PATH_TO_REGISTER':'/login/','~PATH_TO_AUTHORIZE':'/login/','~PATH_TO_PROFILE':'/personal/','~SHOW_DELAY':'N','~SHOW_NOTAVAIL':'N','~SHOW_IMAGE':'Y','~POSITION_HORIZONTAL':'right','~POSITION_VERTICAL':'top','~HIDE_ON_BASKET_PAGES':'N','~CACHE_TYPE':'A','~SHOW_REGISTRATION':'N','~MAX_IMAGE_SIZE':'70','~AJAX':'N','cartId':'bx_basketFKauiI'}; // TODO \Bitrix\Main\Web\Json::encode
-	bx_basketFKauiI.closeMessage = 'Скрыть';
-	bx_basketFKauiI.openMessage  = 'Раскрыть';
-	bx_basketFKauiI.activate();
-</script>							</div>
+								<div id="lsp-block-cart--header" class="lsp-block-cart"></div>
+								<div id="lsp-block-cart--drop" class="lsp-block-cart"></div>
+							</div>
 						</div>
 						<div class="clear"></div>
 					</div>

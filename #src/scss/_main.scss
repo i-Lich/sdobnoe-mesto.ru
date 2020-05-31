@@ -1,8 +1,3 @@
-// Their site
-.header-top{
-  //display: none;
-}
-
 // header
 
 .header{
@@ -54,334 +49,105 @@
       }
     }
   }
-}
-
-.jstore-header-fixed .show-menu-burger{
-  display: none;
-  position: relative;
-  width: 26px;
-  height: 21px;
-  margin: 0 10px;
-  float: left;
-
-}
-
-.jstore-header-fixed .show-menu-burger:before,
-.jstore-header-fixed .show-menu-burger:after{
-  content: '';
-  background-color: #fff;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  transition: all .3s ease 0s;
-}
-.jstore-header-fixed .show-menu-burger span{
-  position: absolute;
-  background-color: #FFFFFF;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  top: 9px;
-  transition: all .3s ease 0s;
-  opacity: 0;
-}
-.jstore-header-fixed .show-menu-burger:before{
-  top: 0;
-  opacity: 0;
-}
-.jstore-header-fixed .show-menu-burger:after{
-  bottom: 0;
-  opacity: 0;
-}
-
-.jstore-header-fixed .show-menu-burger.active span{
-  transform: scale(0);
-  opacity: 1;
-}
-
-.jstore-header-fixed .show-menu-burger.active:before{
-  transform: rotate(45deg);
-  top: 9px;
-  opacity: 1;
-}
-.jstore-header-fixed .show-menu-burger.active:after{
-  transform: rotate(-45deg);
-  bottom: 9px;
-  opacity: 1;
-}
-
-
-.jstore-header-fixed{
-  //display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0;
-  right: 0;
-  background: $lessGrayColor;
-  z-index: 100;
-
-  .jstore-header-wrap{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 15px;
+  #small_basket_box{
     display: flex;
-    height: 50px;
-    max-height: 50px;
+    align-content: center;
     align-items: center;
-    .dropdown-menu-burger-content{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    padding: 27px 45px 28px 60px;
+    margin: 0 4px 0 0;
+    cursor: pointer;
+    &:hover{
+      #lsp-block-cart--header{
+        background-color: $thirdGrayColor;
+        .jstore-js-cart-total-count{
+          background-color: $mainColor !important;
+        }
+      }
+
     }
-    a.all-menu{
-      float: left;
-      width: auto;
-      border: 0;
+    &::before{
+      content: "";
+      top: 23px;
+      width: 1px;
+      height: 27px;
+      background: #ededed;
+      position: absolute;
+      left: 0;
+    }
+    &::after{
+      content: 'корзина';
+      text-transform: uppercase;
+      font-weight: 800;
       font-size: 16px;
-      padding: .25rem 1rem .25rem .5rem;
-      &:hover{
-        color: $hoverColor;
-      }
+      width: 113px;
+      text-align: right;
     }
-    a.logo {
-      display: inline-flex;
-      flex-grow: 1;
-      height: auto;
-      margin: 0 auto;
-    }
-    .dropdown-menu-burger-content {
-      .jstore-header-menu {
+    #lsp-block-cart--header{
+      .lsp-block-cart-inner{
+        padding: 0;
         margin: 0;
-        min-height: 0;
-
-        li {
+        border: 0;
+        .lsp-info-message-bottom,
+        .lsp-cart-items-list{
+          display: none;
+        }
+        .lsp-info-message{
+          font-size: 0;
           margin: 0;
-          position: relative;
-          padding: .25rem 1rem .25rem .5rem;
-          text-transform: uppercase;
+          padding: 0;
+          a{
+            display: none;
+          }
+          .jstore-js-cart-total-count{
+            position: absolute;
+            top: 23%;
+            left: 13%;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+            font-size: 14px;
+            background: #c8c8c8;
+          }
+          .lsp-block-cart-total-name{
+            display: none;
+          }
         }
-      }
-
-      .jstore-header-fixed-dropdown {
 
       }
     }
-    #lsp-block-tree--header{
-      position: relative;
-      display: flex;
-
-      }
-
-      .lsp-js-menu-childs{
-        background-color: $lessGrayColor;
-        position: absolute;
-
+    #lsp-block-cart--drop {
+      display: none;
+      position: absolute;
+      top: 74px;
+      right: -3px;
+      width: 270px;
+      overflow: auto;
+      height: auto;
+      z-index: 5;
+      background: #fff;
+      .lsp-block-cart-inner{
+        .lsp-info-message{
+          color: $textColor;
+          a,span{
+            color: $textColor
+          }
+        }
         margin: 0;
-        top: 35px;
-        display: flex !important;
-        flex-direction: column;
-        visibility: hidden;
-        opacity: 0;
-        transition: all .5s linear;
-        //transform-origin: 0 0;
-        //transform: rotateX(-90deg);
-        //transition: 1s linear;
-          &:after{
-            content: "";
-            display: table;
-            clear: both;
-          }
-        li{
-          transition: .5s linear;
-
-          &:before{
-            content: '';
-            margin: 0;
-          }
-          .lsp-js-menu-childs{
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            left: 100%;
-            width: max-content;
+        .lsp-cart-items-list{
+          .lsp-block-cart-item{
+            .lsp-block-cart-item-row{
+              margin-bottom: 5px;
+            }
           }
         }
-
       }
     }
   }
 
-#lsp-block-tree--header li:hover > .lsp-js-menu-childs{
-  display: flex;
-  visibility: visible;
-  opacity: 1;
-  transition: 1s linear;
-}
-
-.jstore-header-fixed.fixed{
-  display: block;
-  position: fixed;
-}
-
-.jstore-header-fixed a.logo img {
-  height: 40px !important;
-  margin: auto !important;
-  object-fit: contain;
-}
-
-#jstore-css .jstore-tag.jstore-block-search .jstore-block-search-inner{
-  margin: 0;
-}
-
-.jstore-header-fixed ul.jstore-header-fixed-dropdown{
-  margin: 0 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: auto;
-}
-.jstore-header-fixed ul.jstore-header-fixed-dropdown li:last-child{
-  margin-left: 3px;
-}
-.jstore-header-fixed ul.jstore-header-fixed-dropdown li{
-  display: inline-block;
-  cursor: pointer;
-  margin: 0 0 0 18px;
-  &:before{
-    content: '';
-    margin: 0;
-  }
-}
-
-.jstore-header-fixed ul.jstore-header-fixed-dropdown li i{
-  color: $whiteColor;
-  font-size: 22px;
-  cursor: pointer;
-}
-.jstore-header-fixed ul.jstore-header-fixed-dropdown li span{
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.jstore-header-fixed ul.jstore-header-menu li {
-  float: left;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  margin: 0;
-  &:before{
-    content: '';
-    margin: 0;
-  }
-}
-.jstore-header-fixed ul.jstore-header-menu li a{
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  color: #fff;
-  margin: 0 10px 0 0;
-  line-height: 42px ;
-
-}
-
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-cart-items-list,
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-info-message-bottom,
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-info-message .jstore-js-cart-total-count-name{
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-block-cart-inner,
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-info-message{
-  margin: 0;
-  padding: 0;
-}
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-info-message a.jstore-tag{
-  display: none;
-}
-
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed .lsp-info-message{
-  font-size: 0;
-  align-items: center;
-  display: flex;
-}
-
-.jstore-header-fixed #lsp-block-cart{
-  overflow-y: auto;
-  border: 1px solid $mainColor;
-}
-
-.jstore-header-fixed .jstore-tag.lsp-block-cart .lsp-block-cart-inner{
-  margin: 0;
-  border: 0;
-}
-
-//стилизация скролла корзины
-
-.jstore-header-fixed #lsp-block-cart--header::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: $lessGrayColor;
-}
-
-.jstore-header-fixed #lsp-block-cart--header::-webkit-scrollbar
-{
-  width: 6px;
-  background-color: $lessGrayColor;
-}
-
-.jstore-header-fixed #lsp-block-cart--header::-webkit-scrollbar-thumb
-{
-  background-color: $mainColor;
-}
-
-//скрыть
-
-.jstore-header-fixed .jstore-block-search,
-.jstore-header-fixed #lsp-block-userinfo,
-.jstore-header-fixed .dropdown-cart,
-.jstore-header-fixed .jstore-header-fixed-dropdown li.amount-goods #cart-fixed a[href="#!/cart"]{
-  display: none;
-}
-
-//показать
-
-.open {
-  display: block !important;
-}
-
-.jstore-header-fixed .fixed-search,
-.jstore-header-fixed .fixed-signin,
-.jstore-header-fixed .fixed-cart{
-  position: relative;
-  div i{
-    font-size: 25px;
-  }
-}
-
-.jstore-header-fixed .fixed-search .jstore-block-search,
-.jstore-header-fixed #lsp-block-userinfo,
-.jstore-header-fixed #lsp-block-cart--header{
-  position: absolute;
-  width: 270px;
-  background-color: $lessGrayColor;
-  overflow: auto;
-  height: auto;
-  right: 0;
-  top: 36px;
-  z-index: 2;
-}
-
-.jstore-header-fixed #lsp-block-cart--header{
-  border: 1px solid $mainColor;
-}
-
-.jstore-header-fixed #lsp-block-userinfo .lsp-block-userinfo-inner{
-  margin: 0;
 }
 
 // Sidebar
@@ -542,24 +308,30 @@
   #lsp-block-recommendation {
     text-align: center;
     overflow: auto;
-    padding: 16px 10px 18px 18px;
+    padding: 0;
     margin: 0 0 24px 0;
-    border: 1px solid #efefef;
     background: #ffffff;
     border-radius: 8px;
     .lsp-title{
       font-style: normal;
       background-color: $whiteColor;
       margin: 0 0 0 0;
-
-      padding: 0;
+      padding: 16px 10px 18px 18px;
       text-align: left;
       font-size: 16px !important;
       line-height: 1.3;
       text-transform: uppercase;
+      border-top: 1px solid #efefef;
+      border-left: 1px solid #efefef;
+      border-right: 1px solid #efefef;
     }
     .lsp-js-recommendation-items{
       background-color: $whiteColor;
+      overflow: auto;
+      padding: 0 10px 18px 18px;
+      border-bottom: 1px solid #efefef;
+      border-left: 1px solid #efefef;
+      border-right: 1px solid #efefef;
       .lsp-block-item{
         border: 0;
         padding: 10px -0px;
@@ -637,57 +409,6 @@
 
 // nav-button-accordeon
 
-#show-nav {
-  display: none;
-  font-size: 17px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  width: 100%;
-  background-color: $transparent;
-  border: 1px solid $mainColor;
-}
-#show-nav:before,
-#show-nav:after{
-  content: '';
-  width: 14px;
-  height: 3px;
-  background-color: $mainColor;
-  position: absolute;
-  top: 21px;
-  transition: all 0.3s ease 0s;
-}
-
-#show-nav:before{
-  transform: rotate(40deg);
-  left: 10px;
-}
-#show-nav:after{
-  transform: rotate(-40deg);
-  left: 19px;
-}
-
-#show-nav.active:before,
-#show-nav.active:after{
-  background-color: $mainColor;
-}
-
-#show-nav.active:before{
-  transform: rotate(-40deg);
-}
-
-#show-nav.active:after{
-  transform: rotate(40deg);
-}
-
-.show-nav:hover {
-  background-color: $whiteColor;
-  cursor: pointer;
-}
-
 .open {
   display: block !important;
 }
@@ -721,10 +442,9 @@
 }
 
 a.all-menu{
-  //width: 100%;
   border-radius: 12px 12px 0 0;
   width: 100%;
-  background-color: $lessGrayColor;
+  background-color: $btnColor;
   font-family: $mainFont;
   text-transform: uppercase;
   font-weight: 600;
@@ -737,7 +457,6 @@ a.all-menu{
   border-radius: 0 0 15px 15px;
   margin: 0 0 15px 0;
   background: $lessGrayColor;
-  //padding: 18px 30px 13px 30px;
   ul{
     min-height: 0;
   }
@@ -745,11 +464,11 @@ a.all-menu{
 
 #lsp-block-tree li{
   margin: 0;
-  //padding: 0;
   cursor: pointer;
   border-top: 1px solid #ededed;
   a{
     padding: 18px 30px 13px 30px;
+    width: 100%;
   }
   ul.lsp-js-menu-childs{
     margin: 0;
@@ -758,10 +477,10 @@ a.all-menu{
       background-color: #ededed;
       border-color: #f6f6f6;
       a{
+        width: 100%;
         &:hover{
           text-decoration: underline;
         }
-        //padding: 18px 30px 13px 35px;
       }
       &:first-child{
         border-color: #ededed;
@@ -783,7 +502,6 @@ a.all-menu{
 
 }
 #lsp-block-tree li a:hover{
-  //color: #8e8e8e;
 }
 
 #jstore-css .nav-menu a.all-menu:hover{
@@ -1040,7 +758,4 @@ a.all-menu{
       background-position: -9px 758px;
     }
   }
-}
-.lsp-block-item-tags:hover ~ .lsp-block-item-image-link{
-  display: none;
 }

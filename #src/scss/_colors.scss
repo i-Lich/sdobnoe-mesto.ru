@@ -419,3 +419,22 @@
 #lsp-block-items-popup .lsp-popup-price-total{
   color: $mainColor;
 }
+
+//стилизация скролла корзины
+
+#lsp-block-cart--drop::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: $lessGrayColor;
+}
+
+#lsp-block-cart--drop::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: $lessGrayColor;
+}
+
+#lsp-block-cart--drop::-webkit-scrollbar-thumb
+{
+  background-color: $mainColor;
+}
