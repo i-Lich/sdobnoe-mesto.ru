@@ -76,7 +76,7 @@ function cssDev() {
             })
         )
 
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.css))
 
         .pipe(browsersync.stream())
@@ -85,7 +85,7 @@ function cssProd() {
     return src(path.src.css)
         .pipe(
             scss({
-                outputStyle: "expanded"
+                outputStyle: "compressed"
             })
         )
         .pipe(
@@ -211,7 +211,7 @@ function clean(){
     return del(path.clean);
 }
 
-let buildDev = gulp.series(clean, gulp.parallel(html, cssDev, js, images));
+let buildDev = gulp.series(/*clean,*/ gulp.parallel(html, cssDev, js, images));
 let buildProd = gulp.series(clean, gulp.parallel(html, cssProd, js, images));
 // let build = gulp.series(clean, gulp.parallel(html, css, js, images));
 let watch = gulp.parallel(buildDev, watchFiles, browserSync);

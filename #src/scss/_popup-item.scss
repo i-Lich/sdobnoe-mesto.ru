@@ -5,7 +5,7 @@
     background: url("../images/nophoto.png") center center no-repeat;
     background-size: cover;
     img{
-      object-fit: cover;
+      object-fit: contain;
       max-width: none;
       width: 100%;
       min-height: 300px;
@@ -41,5 +41,7 @@
     background-image: url(../images/close.png);
     width: 27px;
     height: 27px;
+    top: 22px;
+    right: 30px;
   }
 }
