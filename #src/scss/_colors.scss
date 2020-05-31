@@ -3,8 +3,10 @@
   background: $transparent;
 }
 .jstore-tag.lsp-button {
-  background: $btnColor;
-  color: $textColor;
+  background: $mainColor;
+  color: $whiteColor;
+  //padding: 11px 20px;
+  border-radius: 22px;
 }
 .jstore-tag.lsp-button.jstore-out-of-stock {
   background: $moreGrayColor;
@@ -12,8 +14,8 @@
 .jstore-tag.lsp-button-plus,
 .jstore-tag.lsp-button-minus,
 .jstore-tag.lsp-button-cross {
-  background: $btnColor;
-  color: $textColor;
+  background: $mainColor;
+  color: $whiteColor;
 }
 .jstore-tag.lsp-button-plus.jstore-out-of-stock {
   background: $moreGrayColor;
@@ -29,8 +31,9 @@
 .jstore-tag.lsp-button-plus:hover,
 .jstore-tag.lsp-button-minus:hover,
 .jstore-tag.lsp-button:hover{
-  background: $hoverColor;
-  color: $whiteColor;
+  background: $btnHoverColor;
+  color: $textColor;
+  transition: .3s;
 }
 .jstore-tag.lsp-button-plus.jstore-out-of-stock:hover {
   background: $moreGrayColor;
@@ -346,10 +349,10 @@
   color: $moreGrayColor;
 }
 #lsp-block-happy-hour .lsp-block-hh-product-new-price{
-  color: $thirdColor;
+  color: $mainColor;
 }
 #lsp-block-happy-hour .lsp-block-hh-product-desc{
-  color: $whiteColor;
+  color: $textColor;
 }
 #lsp-block-item-detail .lsp-modifiers-container {
   border-top-color: $grayColor;

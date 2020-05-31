@@ -10,8 +10,9 @@
 }
 
 .jstore-tag.lsp-button {
-  background: #d9d9d9;
-  color: #333;
+  background: #f1281e;
+  color: #ffffff;
+  border-radius: 22px;
 }
 
 .jstore-tag.lsp-button.jstore-out-of-stock {
@@ -21,8 +22,8 @@
 .jstore-tag.lsp-button-plus,
 .jstore-tag.lsp-button-minus,
 .jstore-tag.lsp-button-cross {
-  background: #d9d9d9;
-  color: #333;
+  background: #f1281e;
+  color: #ffffff;
 }
 
 .jstore-tag.lsp-button-plus.jstore-out-of-stock {
@@ -42,8 +43,9 @@
 .jstore-tag.lsp-button-plus:hover,
 .jstore-tag.lsp-button-minus:hover,
 .jstore-tag.lsp-button:hover {
-  background: #9e120a;
-  color: #ffffff;
+  background: #ededed;
+  color: #333;
+  transition: .3s;
 }
 
 .jstore-tag.lsp-button-plus.jstore-out-of-stock:hover {
@@ -431,11 +433,11 @@
 }
 
 #lsp-block-happy-hour .lsp-block-hh-product-new-price {
-  color: #fbc8c5;
+  color: #f1281e;
 }
 
 #lsp-block-happy-hour .lsp-block-hh-product-desc {
-  color: #ffffff;
+  color: #333;
 }
 
 #lsp-block-item-detail .lsp-modifiers-container {
@@ -562,6 +564,10 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+.jstore-tag.h1 {
+  margin: 15px 0 15px 0;
 }
 
 /* Grouping content
@@ -893,6 +899,10 @@ body {
   padding-top: 50px !important;
 }
 
+.main #jstore-css #left_side {
+  background: none;
+}
+
 #jstore-css #lsp-block-content .lsp-block-cartpage-inner {
   width: 75%;
   margin: 0 auto;
@@ -1033,6 +1043,60 @@ body {
   height: 27px;
   top: 22px;
   right: 30px;
+}
+
+.header .jstore-block-search .jstore-block-search-inner {
+  border: 0;
+  padding: 0;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form {
+  position: relative;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form .lsp-block-userinfo-appeal {
+  display: none;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form label.label-row {
+  margin: 0;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form label.label-row input {
+  height: 40px;
+  padding: 9px 50px 9px 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 300;
+  width: 100%;
+  vertical-align: middle;
+  float: left;
+  background: #fff;
+  color: #333;
+  border-radius: 25px;
+  border: 1px solid #e0e2e5;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form .lsp-block-search-order-button-cont {
+  height: 30px;
+  width: 28px;
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  margin: 0;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form .lsp-block-search-order-button-cont input {
+  background: url("http://sdobnoe-mesto.ru/bitrix/templates/studiofact_getfood/images/sprite.png") no-repeat;
+  height: 30px;
+  background-position: -55px top;
+  width: 28px;
+  transition: none;
+  color: transparent;
+}
+
+.header .jstore-block-search .jstore-block-search-inner form.jstore-js-search-form .lsp-block-search-order-button-cont input:hover {
+  background-position: -100px top;
 }
 
 .jstore-header-fixed .show-menu-burger {
@@ -1381,9 +1445,9 @@ body {
 #jstore-css .content-left-side .lsp-block-item .lsp-block-item-price {
   position: static;
   display: flex;
+  align-self: flex-start;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 130px;
   order: 4;
 }
 
@@ -1396,17 +1460,22 @@ body {
   order: 5;
   position: absolute;
   bottom: 6px;
+  right: 0;
   align-self: flex-end;
   width: auto;
 }
 
 #jstore-css .content-left-side .jstore-block-search {
-  background-color: #e5e5e5;
-  border-left: 2px solid #f1281e;
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background: #fff;
+  border-radius: 8px;
 }
 
 #jstore-css .content-left-side .jstore-block-search .jstore-block-search-inner {
   border: 0;
+  padding: 0;
 }
 
 #jstore-css .content-left-side .jstore-block-search .jstore-block-search-inner .lsp-block-userinfo-appeal {
@@ -1419,13 +1488,17 @@ body {
 }
 
 #jstore-css .content-left-side .lsp-block-terminalinfo {
-  background-color: #e5e5e5;
-  border-left: 2px solid #f1281e;
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background: #fff;
+  border-radius: 8px;
 }
 
 #jstore-css .content-left-side .lsp-block-terminalinfo .lsp-block-restinfo-inner {
   border: 0;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 #jstore-css .content-left-side .lsp-block-terminalinfo .lsp-block-restinfo-inner .city-terminal-c {
@@ -1439,12 +1512,16 @@ body {
 }
 
 #jstore-css .content-left-side #lsp-block-userinfo {
-  background-color: #e5e5e5;
-  border-left: 2px solid #f1281e;
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background: #fff;
+  border-radius: 8px;
 }
 
 #jstore-css .content-left-side #lsp-block-userinfo .lsp-block-userinfo-inner {
   border: 0;
+  padding: 0;
 }
 
 #jstore-css .content-left-side #lsp-block-userinfo .lsp-block-userinfo-inner .lsp-block-userinfo-appeal {
@@ -1454,14 +1531,23 @@ body {
   width: 100%;
 }
 
+#jstore-css .content-left-side #lsp-block-cart {
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
 #jstore-css .content-left-side #lsp-block-cart .lsp-block-cart-inner {
   border: 0;
   padding: 0;
+  margin: 0;
   min-height: 46px;
 }
 
 #jstore-css .content-left-side #lsp-block-cart .lsp-block-cart-inner .lsp-info-message {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   border-left: 2px solid #f1281e;
   font-weight: 800;
   color: #333;
@@ -1481,8 +1567,8 @@ body {
 }
 
 #jstore-css .content-left-side #lsp-block-cart .lsp-block-cart-inner .lsp-block-cart-item {
-  margin: 0 0 10px 0;
-  padding-top: 10px;
+  margin: 0 0 10px 5px;
+  padding: 5px 0 4px 3px;
   font-weight: 400;
   border-bottom: solid 2px #d9d9d9;
   border-left: solid 2px #d9d9d9;
@@ -1504,8 +1590,8 @@ body {
 
 #jstore-css .content-left-side #lsp-block-cart .lsp-block-cart-inner .lsp-info-message-bottom {
   border-left: solid 2px #f1281e;
-  padding-left: 0;
-  margin: 0 0 15px 0;
+  padding: 5px 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -1518,13 +1604,18 @@ body {
 #jstore-css .content-left-side #lsp-block-recommendation {
   text-align: center;
   overflow: auto;
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 #jstore-css .content-left-side #lsp-block-recommendation .lsp-title {
   font-style: normal;
-  background-color: #e5e5e5;
-  margin: 10px 0 0 0;
-  padding: 13px;
+  background-color: #ffffff;
+  margin: 0 0 0 0;
+  padding: 0;
   text-align: left;
   font-size: 16px !important;
   line-height: 1.3;
@@ -1532,12 +1623,13 @@ body {
 }
 
 #jstore-css .content-left-side #lsp-block-recommendation .lsp-js-recommendation-items {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
 }
 
 #jstore-css .content-left-side #lsp-block-recommendation .lsp-js-recommendation-items .lsp-block-item {
   border: 0;
-  background-color: #e5e5e5;
+  padding: 10px -0px;
+  background-color: #ffffff;
 }
 
 #jstore-css .content-left-side #lsp-block-recommendation .lsp-js-recommendation-items .lsp-block-item .lsp-block-item-image-link {
@@ -1549,12 +1641,18 @@ body {
 #jstore-css .content-left-side #lsp-block-gift {
   display: flex;
   flex: 0 1 100%;
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 #jstore-css .content-left-side #lsp-block-gift .lsp-block-gift-inner {
+  background: #ffffff;
+  padding: 0;
   width: 100%;
   border: 0;
-  background-color: #e5e5e5;
 }
 
 #jstore-css .content-left-side #lsp-block-gift .lsp-block-gift-inner .lsp-block-gift-title {
@@ -1564,12 +1662,19 @@ body {
 #jstore-css .content-left-side #lsp-block-happy-hour {
   display: flex;
   flex: 0 1 100%;
+  padding: 16px 10px 18px 18px;
+  margin: 0 0 24px 0;
+  border: 1px solid #efefef;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 #jstore-css .content-left-side #lsp-block-happy-hour .lsp-block-hh-inner {
+  padding: 0;
+  margin: 0;
   width: 100%;
   border: 0;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
 }
 
 #jstore-css .content-left-side .nav-menu,
@@ -1732,7 +1837,11 @@ a.all-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0;
+  padding: 16px 10px 18px 18px;
+  border: 1px solid #efefef;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 #jstore-css #lsp-block-content .jstore-tag.lsp-block-tags-filter .lsp-block-tags-filter-item {
@@ -1744,7 +1853,7 @@ a.all-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 -1rem;
+  margin: 0 -1.5rem 0 -1rem;
 }
 
 #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item {
@@ -1760,7 +1869,7 @@ a.all-menu {
   width: calc(33% - 2rem);
   height: auto;
   margin: 1rem;
-  padding: 0 0 2rem 0;
+  padding: 0;
   text-align: center;
   transition: all 1s ease;
 }
@@ -1914,10 +2023,12 @@ a.all-menu {
 #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-price {
   position: static;
   display: flex;
+  align-self: flex-start;
+  padding: 0 0 0 15px;
   flex-grow: 1;
   justify-content: center;
   min-height: 37px;
-  margin: auto 0 0 0;
+  margin: 1rem 0 1rem 0;
   flex-wrap: wrap;
   align-items: center;
   font-size: 18px;
@@ -1934,13 +2045,36 @@ a.all-menu {
 }
 
 #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-add-to-cart {
+  background: none;
   order: 5;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  border-radius: 0 0 11px 11px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  right: 10px;
+  bottom: 6px;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-add-to-cart:hover {
+  background-color: #f1281e;
+}
+
+#jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-add-to-cart:hover::after {
+  background-position: -69px 758px;
+}
+
+#jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-add-to-cart::after {
+  content: '';
+  width: 24px;
+  height: 26px;
+  display: block;
+  background: url(http://sdobnoe-mesto.ru/bitrix/templates/studiofact_getfood/images/sprite.png);
+  background-position: -9px 758px;
 }
 
 .lsp-block-item-tags:hover ~ .lsp-block-item-image-link {
