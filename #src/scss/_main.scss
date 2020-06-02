@@ -656,7 +656,8 @@ a.all-menu{
   color: $textColor;
 }
 
-#jstore-css .content-left-side #lsp-block-tree{
+#jstore-css .content-left-side #lsp-block-tree,
+#header #lsp-block-tree-header--burger{
   border-radius: 0 0 15px 15px;
   margin: 0 0 15px 0;
   background: $lessGrayColor;
@@ -665,7 +666,8 @@ a.all-menu{
   }
 }
 
-#lsp-block-tree li{
+#lsp-block-tree li,
+#lsp-block-tree-header--burger li{
   margin: 0;
   cursor: pointer;
   border-top: 1px solid #ededed;
@@ -704,10 +706,22 @@ a.all-menu{
   }
 
 }
+.main{
+  #mobile_menu_list{
+    .all-menu{
+      border-radius: 0;
+    }
+    #lsp-block-tree-header--burger{
+      margin: 0;
+    }
+  }
+}
+
 #lsp-block-tree li a:hover{
 }
 
-#jstore-css .nav-menu a.all-menu:hover{
+#jstore-css .nav-menu a.all-menu:hover,
+#mobile_menu_list .nav-menu a.all-menu:hover{
   color: #8e8e8e;
 }
 

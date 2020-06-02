@@ -57,14 +57,22 @@ body{
 }
 
 @media (max-width: 768px) {
+  .header .logo {
+    margin: 5px 0 0 -72px;
+  }
   .mobile_menu_list_header{
     margin: 17px 0 10px 10px;
     padding: 0;
     span.mobile{
       margin: 0;
     }
+    .mobile_menu_list_header__text{
+      margin: 9px 0 0 17px;
+    }
   }
-
+  #mobile_menu_list .mobile_dop_menu_list .user_auth{
+    display: none;
+  }
   .is-catalog-page .left_side_container {
     display: none;
   }
