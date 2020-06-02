@@ -155,7 +155,7 @@
 }
 
 #lsp-block-popup .lsp-popup-cont {
-  background: url(/bitrix/templates/studiofact_getfood/images/site-bg-new3.jpg) repeat;
+  background: url(http://sdobnoe-mesto.ru/bitrix/templates/studiofact_getfood/images/site-bg-new3.jpg) repeat;
 }
 
 #lsp-block-items-popup .lsp-modifiers-container {
@@ -977,7 +977,8 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 
 @media (max-width: 768px) {
   .mobile_menu_list_header {
-    padding: 17px 0 10px 10px;
+    margin: 17px 0 10px 10px;
+    padding: 0;
   }
   .mobile_menu_list_header span.mobile {
     margin: 0;
@@ -1813,6 +1814,7 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 
 .content-right-side #lsp-block-content .lsp-block-content--preloader {
   color: #333;
+  line-height: 40px;
 }
 
 .content-right-side #lsp-block-content .jstore-page-category-search > .h1 {
