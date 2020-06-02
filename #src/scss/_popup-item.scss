@@ -1,47 +1,61 @@
-#lsp-block-popup .lsp-block-items-popup{
-  box-shadow: inset 3px 0 0 0 $mainColor;
-  .lsp-popup-item-image{
-    display: block;
-    background: url("../images/nophoto.png") center center no-repeat;
-    background-size: cover;
-    img{
-      object-fit: cover;
-      max-width: none;
-      width: 100%;
-      min-height: 300px;
+#lsp-block-popup{
+  .lsp-block-terminal-change{
+    .lsp-js-popup-close{
+      background-size: contain;
+      background-image: url(../images/close.png);
+      width: 27px;
+      height: 27px;
+      top: 22px;
+      right: 30px;
     }
   }
-  .lsp-popup-energy-cont{
-    border-top: 2px solid $grayColor;
-  }
-  .lsp-type-modifer-group-items-c{
+  .lsp-block-items-popup{
+    box-shadow: inset 3px 0 0 0 $mainColor;
+    .lsp-popup-item-image{
+      border-radius: 8px;
+      display: block;
+      background: url("../images/nophoto.png") center center no-repeat;
+      background-size: cover;
+      img{
+        object-fit: cover;
+        max-width: none;
+        width: 100%;
+        min-height: 300px;
+      }
+    }
+    .lsp-popup-energy-cont{
+      border-top: 2px solid $grayColor;
+    }
+    .lsp-type-modifer-group-items-c{
 
-    .lsp-type-modifier-item{
-      span{
-        border-left: 2px solid transparent;
+      .lsp-type-modifier-item{
+        span{
+          border-left: 2px solid transparent;
+        }
+        &:hover span {
+          background: $grayColor;
+          border-left: 2px solid $mainColor;
+        }
+        .lsp-button-red:hover{
+          background: $mainColor;
+        }
       }
-      &:hover span {
-        background: $grayColor;
-        border-left: 2px solid $mainColor;
-      }
-      .lsp-button-red:hover{
-        background: $mainColor;
+      .lsp-popup-count{
+        font-size: 14px;
       }
     }
-    .lsp-popup-count{
-      font-size: 14px;
+    .lsp-popup-item-description-block{
+      background: $whiteColor;
+      padding: 1rem;
+      border-radius: 8px;
     }
-  }
-  .lsp-popup-item-description-block{
-    background: $whiteColor;
-    padding: 1rem;
-  }
-  .lsp-js-popup-close{
-    background-size: contain;
-    background-image: url(../images/close.png);
-    width: 27px;
-    height: 27px;
-    top: 22px;
-    right: 30px;
+    .lsp-js-popup-close{
+      background-size: contain;
+      background-image: url(../images/close.png);
+      width: 27px;
+      height: 27px;
+      top: 22px;
+      right: 30px;
+    }
   }
 }

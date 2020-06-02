@@ -106,14 +106,27 @@ $(function() {
         }
     }
 
-    $("#small_basket_box").click(function () {
-        $('.jstore-header-menu').removeClass('open');
-        $('.show-menu-burger').removeClass('active');
+
+    $(".login").click(function () {
+        $('.jstore-block-search').removeClass('open--search');
+        $('#lsp-block-userinfo').removeClass('open');
+        $('#lsp-block-cart--drop').removeClass('open');
+        $('#jstore-block-search--popup').removeClass('open');
+        $('#lsp-block-userinfo--popup').toggleClass('open');
+    });
+    $(".search-open--popup").click(function () {
+        $('#lsp-block-userinfo').removeClass('open');
+        $('#lsp-block-cart--drop').removeClass('open');
+        $('#lsp-block-userinfo--popup').removeClass('open');
+        $('#jstore-block-search--popup').toggleClass('open--search');
+    });
+
+    $(".lsp-block-cart-open--drop").click(function () {
         $('.jstore-block-search').removeClass('open');
+        $('#jstore-block-search--popup').removeClass('open--search');
         $('#lsp-block-userinfo').removeClass('open');
         $('#lsp-block-cart--drop').toggleClass('open');
         cartHeight();
-
     });
 
     window.onresize = function resizeCartBlock() {

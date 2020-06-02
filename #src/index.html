@@ -279,11 +279,22 @@
 															</div>
 						</div>
 						<div class="fr">
+							<div class="login">
+								<div id="lsp-block-userinfo--popup" class="lsp-block-userinfo"></div>
+							</div>
 							<div class="search_box fl">
 								<div id="search" class="bx_search_container">
-									<div class="jstore-tag jstore-block-search"></div>
+									<div class="search--popup">
+										<div class="search-open--popup">
+											<svg class="i-icon">
+												<use xlink:href="#svg-icon-search"></use>
+											</svg>
+										</div>
+										<div id="jstore-block-search--popup" class="jstore-tag jstore-block-search"></div>
+									</div>
+									<div id="jstore-block-search--desktop" class="jstore-tag jstore-block-search"></div>
 
-</div>
+								</div>
 <script>
 	BX.ready(function(){
         new JCTitleSearchCustom({
@@ -297,6 +308,7 @@
 
 							</div>
 							<div id="small_basket_box" class="fr" data-path="/include/buy_one_click.php">
+								<div class="lsp-block-cart-open--drop"></div>
 								<div id="lsp-block-cart--header" class="lsp-block-cart"></div>
 								<div id="lsp-block-cart--drop" class="lsp-block-cart"></div>
 							</div>
@@ -417,45 +429,6 @@
 							<div id='jstore-css'>
 					<div class="content">
 						<div id="main_block_page">
-
-<!--
-								<div class="jstore-header-fixed">
-									<div class="jstore-header-wrap">
-										<div class="show-menu-burger">
-											<span></span>
-										</div>
-										<div class="dropdown-menu-burger-content">
-											<a class="all-menu" href="#/">All menu</a>
-											<div id="lsp-block-tree&#45;&#45;header" class="lsp-block-menu-tree jstore-header-menu"></div>
-
-										</div>
-
-										<a class="logo" href="../home-cz/index.html">
-											<img src="images/header-logo.png">
-										</a>
-										<ul class="jstore-header-fixed-dropdown">
-											<li class="fixed-search">
-												<div class="icon-search"><i class="fas fa-search" aria-hidden="true"></i></div>
-												<div class="jstore-tag jstore-block-search"></div>
-											</li>
-											<li class="fixed-signin">
-												<div class="icon-signin"><i class="fa fa-user" aria-hidden="true"></i></div>
-												<div id="lsp-block-userinfo" class="lsp-block-userinfo"></div>
-											</li>
-											<li class="fixed-cart">
-												<div class="icon-cart"><i class="fas fa-shopping-cart" aria-hidden="true"></i></div>
-												<div id="lsp-block-cart&#45;&#45;header" class="lsp-block-cart dropdown-cart"></div>
-											</li>
-											<li class="amount-goods">
-												<div id="cart-fixed" class="lsp-block-cart" data-page="cart">
-													<span class="jstore-tag lsp-block-cart-total jstore-js-cart-total-count" >0</span>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
--->
-
 								<div class="content-right-side">
 									<div id='lsp-block-content' class='lsp-block-content items'>
 										<div class="lsp-block-content--preloader">Меню загружается...</div>
