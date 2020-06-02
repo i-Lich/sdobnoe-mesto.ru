@@ -57,6 +57,20 @@ body{
 }
 
 @media (max-width: 768px) {
+  #jstore-css{
+    flex-direction: column;
+  }
+  .main .content{
+    order: 2;
+  }
+  .is-catalog-page .left_side_container{
+    order: 1;
+    #left_side{
+      display: block;
+      width: 100%;
+    }
+  }
+
   .header .logo {
     margin: 5px 0 0 -72px;
   }
@@ -74,7 +88,7 @@ body{
     display: none;
   }
   .is-catalog-page .left_side_container {
-    display: none;
+    //display: none;
   }
   .header:not(.menu_search_container) .search_box input[type="text"] {
     display: block;

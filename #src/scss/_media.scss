@@ -136,7 +136,7 @@
 @media (max-width: 920px){
   .header #small_basket_box{
     padding: 0;
-    margin: 18px 49px 28px 0;
+    margin: 16px 49px 28px 0;
     #lsp-block-cart--header{
       padding: 0 0 0 0;
       position: static;
@@ -144,6 +144,9 @@
       height: 0;
       .lsp-block-cart-inner .lsp-info-message .jstore-js-cart-total-count {
         display: block;
+        top: 0;
+        left: 0;
+
       }
     }
     #lsp-block-cart--drop{
@@ -152,8 +155,11 @@
     .lsp-block-cart-open--drop{
       width: 40px;
       height: 40px;
+      position: static;
     }
-
+    &:hover{
+      background-color: $transparent;
+    }
     }
     &::after,
     &::before{
@@ -209,26 +215,198 @@
   #jstore-css .container{
     max-width: none;
   }
+
+  #jstore-css .content-left-side {
+    #lsp-block-tree,
+    .lsp-js-recommendation-items,
+    .lsp-cart-items-list,
+    .lsp-info-message-bottom,
+    .lsp-block-hh-product-title,
+    .lsp-block-hh-product-image,
+    .lsp-block-hh-product-desc,
+    .lsp-block-hh-product-prices,
+    .lsp-block-hh-countdown-title,
+    .lsp-block-hh-countdown-time,
+    .lsp-block-hh-add-to-cart,
+    .lsp-block-js-gift-items,
+    .lsp-block-gift-accept {
+      display: none;
+    }
+
+    .lsp-block-hh-title {
+      display: block;
+    }
+
+    .menu-more,
+    .recommendation-more,
+    .happy-hour-more,
+    .lsp-block-gift-more,
+    .cart-more,
+    .cart-to-order {
+      display: flex;
+      top: 8px;
+      right: 5px;
+      border-radius: 22px;
+    }
+    .jstore-block-search {
+      position: relative;
+      height: 46px;
+      margin: 0 0 15px 0;
+
+      .jstore-block-search-inner {
+        height: 100%;
+        padding: 1px 10px 0 10px;
+
+        .jstore-js-search-form {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 100%;
+
+          .lsp-block-userinfo-appeal {
+            display: none;
+          }
+
+          .label-row {
+            flex: 1 1 auto;
+            margin: 0;
+
+            .label-row-field-search {
+              input {
+                padding-right: 16%;
+                height: 30px;
+              }
+            }
+          }
+
+          .lsp-block-search-order-button-cont {
+
+            input {
+              height: 100%;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+
+    }
+
+    .lsp-block-terminalinfo {
+      margin: 0 0 15px 0;
+      .lsp-block-restinfo-inner {
+        .city-terminal-c {
+          a.cityName {
+          }
+        }
+      }
+    }
+
+    #lsp-block-userinfo {
+      margin: 0 0 15px 0;
+      .lsp-block-userinfo-inner {
+        .lsp-block-userinfo-appeal {
+          float: left;
+          padding-right: 20px;
+        }
+      }
+    }
+    .nav-menu{
+      margin: 0 0 15px 0;
+      #lsp-block-tree {
+      .lsp-js-menu-childs {
+        width: 100%;
+        word-break: break-all;
+        margin: 0;
+
+        li {
+          a {
+            font-size: 18px;
+          }
+
+          ul {
+            li {
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+    .lsp-block-cart-wrapper{
+      margin: 0 0 15px 0;
+      #lsp-block-cart{
+        margin: 0;
+        .lsp-block-cart-inner{
+          min-height: 0;
+          .lsp-info-message{
+            border: 0;
+            padding: 0;
+            font-size: 18px;
+            font-style: italic;
+            text-transform: none;
+            a{
+              font-size: 18px;
+              font-style: italic;
+              text-transform: lowercase;
+            }
+            span {
+              font-size: 18px;
+              font-style: italic;
+            }
+          }
+          .lsp-cart-items-list{
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+
+    .lsp-block-gift-wrapper {
+      margin: 0 0 15px 0;
+      #lsp-block-gift{
+        .lsp-block-gift-inner{
+          .lsp-block-gift-title{
+            margin: 0;
+          }
+          .lsp-block-js-gift-items{
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+    .lsp-block-happy-hour-wrapper{
+      margin: 0 0 15px 0;
+      #lsp-block-happy-hour{
+        .lsp-block-hh-inner{
+          margin: 0;
+          .lsp-block-hh-title{
+            margin: 0;
+          }
+          .lsp-block-hh-product-title{
+            margin: 10px 0 10px 0;
+          }
+        }
+      }
+
+    }
+    .lsp-block-recommendation-wrapper{
+      margin: 0 0 15px 0;
+      #lsp-block-recommendation{
+        h2.lsp-title{
+          font-size: 18px !important;
+          font-style: italic;
+          text-transform: none;
+        }
+      }
+    }
+
+  }
+
   #jstore-css .content-right-side{
     padding: 0;
     margin: 20px 0 0 0;
-    //.lsp-block-items-list {
-    //  .lsp-block-item-price{
-    //    position: static;
-    //    display: flex;
-    //    justify-content: flex-end;
-    //    align-items: center;
-    //    padding-right: 150px;
-    //    order: 4;
-    //    .lsp-block-item-measurement{
-    //      padding-left: 3px;
-    //      font-size: 18px;
-    //    }
-    //  }
-    //  .lsp-block-item-add-to-cart{
-    //    position: absolute;
-    //  }
-    //}
   }
 
   #lsp-block-popup .lsp-popup-cont {
@@ -262,16 +440,8 @@
 }
 
 @media (max-width: 610px) {
-  .jstore-header-fixed .show-menu-burger {
-    margin-right: 10px;
-  }
-  .jstore-header-fixed a.logo {
-    display: none;
-  }
 
   #jstore-css {
-    flex-direction: column;
-
     #lsp-block-tree--header {
       .lsp-js-menu-childs {
         width: 100%;
@@ -280,60 +450,7 @@
       }
     }
   }
-  #jstore-css .content-left-side {
-    flex: 0 0 auto;
 
-    #lsp-block-tree,
-    .lsp-js-recommendation-items,
-    .lsp-cart-items-list,
-    .lsp-info-message-bottom,
-    .lsp-block-hh-product-title,
-    .lsp-block-hh-product-image,
-    .lsp-block-hh-product-desc,
-    .lsp-block-hh-product-prices,
-    .lsp-block-hh-countdown-title,
-    .lsp-block-hh-countdown-time,
-    .lsp-block-hh-add-to-cart,
-    .lsp-block-js-gift-items,
-    .lsp-block-gift-accept {
-      display: none;
-    }
-
-    .lsp-block-hh-title {
-      display: block;
-    }
-
-    .menu-more,
-    .recommendation-more,
-    .happy-hour-more,
-    .lsp-block-gift-more,
-    .cart-more,
-    .cart-to-order {
-      display: flex;
-    }
-
-    #lsp-block-tree {
-      .lsp-js-menu-childs {
-        width: 100%;
-        word-break: break-all;
-        margin: 0;
-
-        li {
-          a {
-            font-size: 18px;
-          }
-
-          ul {
-            li {
-              a {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   #jstore-css .content-right-side {
     padding: 0;
     margin: 20px 0 0 0;
@@ -377,67 +494,11 @@
       }
     }
 
-    .jstore-block-search {
-      position: relative;
-      height: 46px;
-      margin-bottom: 10px;
 
-      .jstore-block-search-inner {
-        height: 100%;
-        padding: 1px 10px 0 10px;
-
-        .jstore-js-search-form {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          height: 100%;
-
-          .lsp-block-userinfo-appeal {
-            display: none;
-          }
-
-          .label-row {
-            flex: 1 1 auto;
-            margin: 0;
-
-            .label-row-field-search {
-              input {
-                padding-right: 16%;
-              }
-            }
-          }
-
-          .lsp-block-search-order-button-cont {
-
-            input {
-              height: 100%;
-              border-radius: 0;
-            }
-          }
-        }
-      }
-
-    }
   }
 
 
-  .lsp-block-terminalinfo {
-    .lsp-block-restinfo-inner {
-      .city-terminal-c {
-        a.cityName {
-        }
-      }
-    }
-  }
 
-  #lsp-block-userinfo {
-    .lsp-block-userinfo-inner {
-      .lsp-block-userinfo-appeal {
-        float: left;
-        padding-right: 20px;
-      }
-    }
-  }
 
   .nav-menu {
     background-color: $whiteColor;

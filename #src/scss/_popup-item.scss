@@ -11,8 +11,11 @@
   }
   .lsp-block-items-popup{
     box-shadow: inset 3px 0 0 0 $mainColor;
-    .lsp-popup-item-image{
+    .lsp-popup-item-image-c{
       border-radius: 8px;
+    }
+    .lsp-popup-item-image{
+
       display: block;
       background: url("../images/nophoto.png") center center no-repeat;
       background-size: cover;
@@ -56,6 +59,28 @@
       height: 27px;
       top: 22px;
       right: 30px;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  #lsp-block-popup{
+    .lsp-block-items-popup{
+      .lsp-popup-item-image-c{
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+      .lsp-popup-item-image{
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+        }
+      }
+      .lsp-js-popup-close{
+        top: 15px;
+        right: 20px;
+      }
     }
   }
 }
