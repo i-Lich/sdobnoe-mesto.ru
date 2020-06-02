@@ -976,7 +976,10 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 }
 
 @media (max-width: 768px) {
-  span.mobile {
+  .mobile_menu_list_header {
+    padding: 17px 0 10px 10px;
+  }
+  .mobile_menu_list_header span.mobile {
     margin: 0;
   }
   .is-catalog-page .left_side_container {

@@ -57,9 +57,13 @@ body{
 }
 
 @media (max-width: 768px) {
-  span.mobile{
-    margin: 0;
+  .mobile_menu_list_header{
+    padding: 17px 0 10px 10px;
+    span.mobile{
+      margin: 0;
+    }
   }
+
   .is-catalog-page .left_side_container {
     display: none;
   }
