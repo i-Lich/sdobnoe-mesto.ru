@@ -1591,6 +1591,8 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 
 #jstore-css .content-left-side .jstore-block-search .jstore-block-search-inner .jstore-search-input {
   font-weight: 800;
+  padding: 9px 50px 9px 16px;
+  border-radius: 25px;
 }
 
 #jstore-css .content-left-side .lsp-block-terminalinfo {
@@ -1838,10 +1840,6 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 #jstore-css .content-left-side .cart-to-order:hover {
   background-color: #f1281e;
   color: #ffffff;
-}
-
-#jstore-css .content-left-side .cart-more {
-  right: 135px !important;
 }
 
 .open {
@@ -2437,6 +2435,9 @@ a.all-menu {
     right: 5px;
     border-radius: 22px;
   }
+  #jstore-css .content-left-side .cart-more {
+    right: 135px;
+  }
   #jstore-css .content-left-side .jstore-block-search {
     position: relative;
     height: 46px;
@@ -2465,7 +2466,6 @@ a.all-menu {
   }
   #jstore-css .content-left-side .jstore-block-search .jstore-block-search-inner .jstore-js-search-form .lsp-block-search-order-button-cont input {
     height: 100%;
-    border-radius: 0;
   }
   #jstore-css .content-left-side .lsp-block-terminalinfo {
     margin: 0 0 15px 0;
@@ -2542,6 +2542,9 @@ a.all-menu {
   }
   #jstore-css .content-left-side .lsp-block-recommendation-wrapper {
     margin: 0 0 15px 0;
+  }
+  #jstore-css .content-left-side .lsp-block-recommendation-wrapper #lsp-block-recommendation {
+    margin: 0;
   }
   #jstore-css .content-left-side .lsp-block-recommendation-wrapper #lsp-block-recommendation h2.lsp-title {
     font-size: 18px !important;
@@ -2657,7 +2660,7 @@ a.all-menu {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .jstore-header-fixed-dropdown .fixed-search .jstore-block-search {
     width: 200px;
   }
@@ -2674,7 +2677,7 @@ a.all-menu {
     font-size: 18px;
   }
   #jstore-css .content-left-side .lsp-block-cart-wrapper .cart-more {
-    right: 0;
+    right: 5px;
   }
   #jstore-css .content-left-side .lsp-block-cart-wrapper a.cart-to-order {
     display: none;

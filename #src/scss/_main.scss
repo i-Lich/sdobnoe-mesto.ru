@@ -365,6 +365,8 @@
       }
       .jstore-search-input{
         font-weight: 800;
+        padding: 9px 50px 9px 16px;
+        border-radius: 25px;
       }
     }
   }
@@ -586,9 +588,7 @@
       color: $whiteColor;
     }
   }
-  .cart-more{
-    right: 135px !important;
-  }
+
 }
 
 // nav-button-accordeon
