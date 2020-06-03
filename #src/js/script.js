@@ -134,10 +134,22 @@ $(function() {
             cartHeight();
         }
     };
-    //scroll к контенту при клике на кнопку "оформить заказ"
+    //scroll к контенту при клике на кнопку "оформить заказ" <span class="icon span_depth_level_1"></span>
 
     window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
     jStoreEvents.push(['ready', null, function (data) {
+        $('.lsp-block-menu-tree>li:has(ul)').append("<span class=\"icon span_depth_level_1\"></span>");
+        $('.lsp-block-menu-tree>li ul li:has(ul)').append("<span class=\"icon span_depth_level_2\"></span>");
+        $(".span_depth_level_1").click(function () {
+            if ($(this).closest('li').find('a').eq(0).hasClass('child-selected')){
+                $(this).closest('li').find('a').eq(0).toggleClass('child-selected');
+            } else{
+                $(this).closest('li').find('a').eq(0).toggleClass('selected');
+            }
+        });
+        $(".span_depth_level_2").click(function () {
+            $(this).closest('li').find('a').eq(0).toggleClass('child-selected');
+        });
         const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
         // console.log(buttonsToOrder);
         buttonsToOrder.forEach(function(elem) {
