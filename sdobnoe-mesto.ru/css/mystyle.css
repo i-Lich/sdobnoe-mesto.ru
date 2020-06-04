@@ -1646,6 +1646,7 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 
 #jstore-css .content-left-side .nav-menu .all-menu {
   padding: 16px 10px 18px 18px;
+  border: 1px solid #ededed;
   font-size: 18px;
   font-style: italic;
   text-transform: none;
@@ -1928,7 +1929,7 @@ a.all-menu {
 #jstore-css .content-left-side #lsp-block-tree,
 #header #lsp-block-tree-header--burger {
   border-radius: 0 0 15px 15px;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   background: #e5e5e5;
 }
 
