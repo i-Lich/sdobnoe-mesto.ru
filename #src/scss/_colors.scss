@@ -159,8 +159,8 @@
 #lsp-block-terminal-change .cityItem {
   border-color: $transparent;
 }
-#lsp-block-city-change .cityItem:hover,
-#lsp-block-terminal-change .cityItem:hover{
+#lsp-block-popup #lsp-block-city-change .cityItem:hover,
+#lsp-block-popup #lsp-block-terminal-change .cityItem:hover{
   color: $whiteColor;
   background-color: $mainColor;
 }

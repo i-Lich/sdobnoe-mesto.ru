@@ -177,6 +177,10 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     $('#lsp-block-gift').removeClass('open');
     $('#lsp-block-happy-hour').removeClass('open');
     $('#lsp-block-recommendation').removeClass('open');
+    //имитировать клик по бургеру, если он был открыт и изменилась страница
+    if ($('.mobile_menu_list_wrapper').hasClass('mobile_menu_list_wrapper--opened')){
+        $(".mobile_menu").click();
+    }
 }]);
 
 
