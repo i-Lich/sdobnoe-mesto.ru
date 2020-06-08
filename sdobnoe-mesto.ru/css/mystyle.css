@@ -1595,6 +1595,7 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 }
 
 #jstore-css .content-left-side .jstore-block-search .jstore-block-search-inner .jstore-search-input {
+  height: 30px;
   font-weight: 800;
   padding: 9px 50px 9px 16px;
   border-radius: 25px;
@@ -2373,9 +2374,6 @@ a.all-menu {
   }
   .jstore-header-fixed ul.jstore-header-menu li {
     float: none;
-  }
-  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-name {
-    width: 50%;
   }
   #lsp-block-popup .lsp-popup-cont {
     width: 764px;

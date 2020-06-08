@@ -107,6 +107,15 @@
 		<![endif]-->
 
 		<!-- iiko delivery -->
+<!--		<script type="text/javascript">-->
+<!--			window.jStoreConfig = {-->
+<!--				'restaurant' : '"3b9864fb-2859-11e9-80d5-d8d385655247',-->
+<!--				'loc' : {-->
+<!--					'Terminal' : 'пекарня',-->
+<!--					'CURR' : '$'-->
+<!--				}-->
+<!--			};-->
+<!--		</script>-->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 		<link href="https://deliverywiget.iiko.ru/v2_0/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/mystyle.css">
@@ -119,8 +128,19 @@
 				// 'restaurant': "3f46ac68-54f4-4ea5-84c1-b7db224a544e",
 				//mesto
 				'restaurant': "3b9864fb-2859-11e9-80d5-d8d385655247",
+
 				//che
 				// 'restaurant': "f3ddc282-177e-11e9-90ed-6cb3110f5fe6",
+				'loc' : {
+					'Your_terminal' : 'Пекарня',
+					'Chose_Your_terminal' : 'Выберите пекарню',
+					'cart_item_unActive' : 'Товар не доступен в выбранной пекарне',
+					'Order_Accepted' : 'Заказ принят в пекарню',
+					'fail_mess' : '<p class=\'jstore-tag\'>Произошла проблема при оплате, но мы передали Ваш заказ в пекарню. Ожидайте звонка или позвоните сами по телефону <b>%deliveryServicePhone%</b></p>',
+					'Terminal' : 'Пекарня',
+					'order_error' : '<p class=\'jstore-tag\'>Не удалось отправить заказ в пекарню, пожалуйста позвоните в службу доставки по телефону <strong class=\'jstore-tag\'>%deliveryServicePhone%</strong>.</p>',
+					'Take_from_Rest' : 'Забрать из пекарни',
+				},
 				'server': {
 					'url': 'https://deliverywiget.iiko.ru'
 				},
@@ -134,7 +154,7 @@
 				],
 				'urls': {
 					'documentRoot': ''
-				},
+				}
 			};
 		</script>
 		<script data-main="https://deliverywiget.iiko.ru/v2_0/app/config" src="https://deliverywiget.iiko.ru/v2_0/libs/require.js"></script>
