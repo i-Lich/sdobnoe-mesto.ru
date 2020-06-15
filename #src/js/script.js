@@ -120,31 +120,33 @@ $(function() {
             elem.addEventListener("click", function() {
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $("#lsp-block-content").offset().top - 120
-                }, 1000);
+                }, 500);
             });
         });
         //end scroll к контенту при клике на авторизацию-вход
-        //scroll к контенту при клике на кнопку "оформить заказ" <span class="icon span_depth_level_1"></span>
+        //scroll к контенту при клике на кнопку "оформить заказ"
         const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $("#lsp-block-content").offset().top - 120
-                }, 1000);
+                }, 500);
+            });
+        });
+        //scroll к контенту при кнопке поиска
+        const buttonsToSearch = document.querySelectorAll('.lsp-block-search-order-button-cont > input');
+        buttonsToSearch.forEach(function(elem) {
+            elem.addEventListener("click", function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#lsp-block-content").offset().top - 160
+                }, 500);
             });
         });
     }]);
 });
 
-
 window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
 jStoreEvents.push(['pageChanged', null, function (data) {
-    //scroll к контенту, если изменяется на страницу поиска
-    if ((arguments[0].newPage === 'search')){
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#lsp-block-content").offset().top - 160
-        }, 1000);
-    }
     $('.jstore-block-search').removeClass('open');
     $('.show-menu-burger').removeClass('active');
     $('.lsp-block-terminalinfo').removeClass('open');
@@ -160,6 +162,17 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     if ($('.mobile_menu_list_wrapper').hasClass('mobile_menu_list_wrapper--opened')){
         $(".mobile_menu").click();
     }
+
+    // //scroll к контенту при клике на кнопку "оформить заказ"
+    // const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
+    // buttonsToOrder.forEach(function(elem) {
+    //     elem.addEventListener("click", function() {
+    //         $([document.documentElement, document.body]).animate({
+    //             scrollTop: $("#lsp-block-content").offset().top
+    //         }, 500);
+    //     });
+    // });
+
     // if (arguments[0].newPage === 'search') {
     //     $([document.documentElement, document.body]).animate({
     //         scrollTop: $("#lsp-block-content").offset().top - 20
