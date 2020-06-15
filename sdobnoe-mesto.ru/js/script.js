@@ -125,7 +125,7 @@ $(function() {
         });
         //end scroll к контенту при клике на авторизацию-вход
         //scroll к контенту при клике на кнопку "оформить заказ"
-        const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont > a');
+        const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
                 $([document.documentElement, document.body]).animate({
