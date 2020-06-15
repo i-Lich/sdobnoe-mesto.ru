@@ -125,7 +125,7 @@ $(function() {
         });
         //end scroll к контенту при клике на авторизацию-вход
         //scroll к контенту при клике на кнопку "оформить заказ"
-        const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
+        const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont > a');
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
                 $([document.documentElement, document.body]).animate({
@@ -138,8 +138,9 @@ $(function() {
         buttonsToSearch.forEach(function(elem) {
             elem.addEventListener("click", function() {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#lsp-block-content").offset().top - 160
+                    scrollTop: $("#lsp-block-content").offset().top - 120
                 }, 500);
+                $('#jstore-block-search--popup').removeClass('open--search');
             });
         });
     }]);
@@ -162,6 +163,12 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     if ($('.mobile_menu_list_wrapper').hasClass('mobile_menu_list_wrapper--opened')){
         $(".mobile_menu").click();
     }
+    //скролл к контенту при смене категории на мобилках:
+    if ((arguments[0].newPage === 'category') && (document.body.clientWidth < 769)){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lsp-block-content").offset().top - 120
+        }, 500);
+    }
 
     // //scroll к контенту при клике на кнопку "оформить заказ"
     // const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
@@ -173,13 +180,8 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     //     });
     // });
 
-    // if (arguments[0].newPage === 'search') {
-    //     $([document.documentElement, document.body]).animate({
-    //         scrollTop: $("#lsp-block-content").offset().top - 20
-    //     }, 1000);
-    // }
-    // console.log('arguments');
-    // console.log(arguments);
+    console.log('arguments');
+    console.log(arguments);
 }]);
 
 
