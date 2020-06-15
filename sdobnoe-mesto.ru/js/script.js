@@ -169,7 +169,7 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     $('.jstore-block-search').removeClass('open');
     $('.show-menu-burger').removeClass('active');
     $('.lsp-block-terminalinfo').removeClass('open');
-    $('#lsp-block-userinfo').removeClass('open');
+    $('#lsp-block-userinfo--popup').removeClass('open');
     $('#lsp-block-tree--header').removeClass('open');
     $('#lsp-block-cart--drop').removeClass('open');
     $('.lsp-cart-items-list').removeClass('open');
@@ -181,6 +181,13 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     if ($('.mobile_menu_list_wrapper').hasClass('mobile_menu_list_wrapper--opened')){
         $(".mobile_menu").click();
     }
+    // if (arguments[0].newPage === 'search') {
+    //     $([document.documentElement, document.body]).animate({
+    //         scrollTop: $("#lsp-block-content").offset().top - 20
+    //     }, 1000);
+    // }
+    // console.log('arguments');
+    // console.log(arguments);
 }]);
 
 

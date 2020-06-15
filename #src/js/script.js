@@ -181,6 +181,13 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     if ($('.mobile_menu_list_wrapper').hasClass('mobile_menu_list_wrapper--opened')){
         $(".mobile_menu").click();
     }
+    // if (arguments[0].newPage === 'search') {
+    //     $([document.documentElement, document.body]).animate({
+    //         scrollTop: $("#lsp-block-content").offset().top - 20
+    //     }, 1000);
+    // }
+    // console.log('arguments');
+    // console.log(arguments);
 }]);
 
 

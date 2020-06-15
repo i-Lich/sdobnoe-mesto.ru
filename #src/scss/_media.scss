@@ -111,7 +111,6 @@
 
   #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
     .lsp-block-item-name{
-      width: 50%;
     }
   }
   #lsp-block-popup .lsp-popup-cont {
@@ -357,9 +356,10 @@
           min-height: 0;
           .lsp-info-message{
             border: 0;
-            padding: 0;
+            padding: 0 40px 0 0;
             font-size: 18px;
             font-style: italic;
+            word-break: break-word;
             text-transform: none;
             a{
               font-size: 18px;
@@ -440,155 +440,27 @@
 }
 
 @media (max-width: 665px) {
-  #lsp-block-items-popup .lsp-modifier-item {
-    display: inline-grid;
-  }
-  #lsp-block-items-popup .lsp-modifier-summ-c{
-    margin-right: 30px;
-  }
-  #lsp-block-items-popup .lsp-modifier-name-c{
-    margin-bottom: 5px;
-  }
-  #lsp-block-items-popup .lsp-popup-item-description-block{
-    width: auto;
-    padding: 0 30px;
-  }
-}
-
-@media (max-width: 610px) {
-
-  #jstore-css {
-    #lsp-block-tree--header {
-      .lsp-js-menu-childs {
-        width: 100%;
-        word-break: break-word;
-        margin: 0;
-      }
+  #lsp-block-popup{
+    #lsp-block-items-popup .lsp-modifier-item {
+      display: inline-grid;
     }
-  }
-
-  #jstore-css .content-right-side {
-    padding: 0;
-    margin: 20px 0 0 0;
-  }
-  #lsp-block-popup .lsp-popup-cont {
-    transform: translateY(-10px);
-    overflow: auto;
-    width: 100vw;
-    height: 100vh;
-    padding: 10px;
-  }
-  #lsp-block-items-popup .lsp-modifer-group-items,
-  #lsp-block-items-popup .lsp-js-modifiers-container {
-    text-align: center;
-  }
-  #lsp-block-items-popup .lsp-popup-item-description-block {
-    padding: 0 10px;
-  }
-  #lsp-block-content .lsp-form .label-row-field, .jstore-tag .lsp-form .label-row-field {
-    margin: 0;
-    padding: 0 12px 0 0;
-  }
-
-  // sidebar для мобилок
-  .nav-menu,
-  .lsp-block-recommendation-wrapper,
-  .lsp-block-cart-wrapper {
-    background-color: $lessGrayColor;
-  }
-  #jstore-css .content-left-side {
-    .lsp-block-item {
-      .lsp-block-item-image {
-      }
-
-      .lsp-block-item-description {
-      }
-
-      .lsp-block-item-price {
-      }
-
-      .lsp-block-item-add-to-cart {
-      }
+    #lsp-block-items-popup .lsp-modifier-summ-c{
+      margin-right: 30px;
     }
-    #lsp-block-tree {
-      margin: 0;
-      display: none;
-
-      li {
-        //text-align: center;
-        //text-transform: uppercase;
-
-        a {
-          //font-size: 24px;
-          //padding: 0;
-          //width: 100%;
-        }
-
-        ul {
-          li {
-            //border: 1px solid $lessGrayColor;
-            //margin: 2px 10px;
-          }
-        }
-      }
+    #lsp-block-items-popup .lsp-modifier-name-c{
+      margin-bottom: 5px;
     }
-  }
-
-
-  }
-
-
-
-
-  .nav-menu {
-    background-color: $whiteColor;
-    margin-bottom: 10px;
-    position: relative;
-
-
-  #lsp-block-cart {
-    .lsp-block-cart-inner {
-      .lsp-info-message {
-        a {
-        }
-
-        span {
-        }
-      }
-
-      .lsp-block-cart-item {
-        .lsp-block-cart-item-name {
-        }
-
-        .lsp-block-cart-item-row-subname {
-        }
-      }
-    }
-
-    .lsp-info-message-bottom {
-      & span {
-      }
-    }
-  }
-  .lsp-block-recommendation-wrapper {
-    #lsp-block-recommendation {
-      .lsp-title {
-      }
-
-      .lsp-js-recommendation-items {
-        display: none;
-
-        .lsp-block-item {
-        }
-      }
+    #lsp-block-items-popup .lsp-popup-item-description-block{
+      width: auto;
+      border-left: 3px solid $mainColor;
+      padding: 0 30px;
+      border-radius: 0;
     }
   }
 }
 
-@media (max-width: 590px) {
-  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
-    flex: 0 1 100%
-  }
+@media (max-width: 645px) {
+
 
   #jstore-css .content-left-side {
     .cart-more{
@@ -606,7 +478,147 @@
 
 }
 
+@media (max-width: 610px) {
+  #jstore-css {
+    #lsp-block-tree--header {
+      .lsp-js-menu-childs {
+        width: 100%;
+        word-break: break-word;
+        margin: 0;
+      }
+    }
+
+
+    .content-right-side {
+      padding: 0;
+      margin: 20px 0 0 0;
+
+      #lsp-block-content .lsp-js-block-items .lsp-block-item {
+        flex: 0 1 100%
+      }
+    }
+
+    #lsp-block-popup .lsp-popup-cont {
+      transform: translateY(-10px);
+      overflow: auto;
+      width: 100vw;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    #lsp-block-items-popup .lsp-modifer-group-items,
+    #lsp-block-items-popup .lsp-js-modifiers-container {
+      text-align: center;
+    }
+
+    #lsp-block-items-popup .lsp-popup-item-description-block {
+      padding: 0 10px;
+    }
+
+    #lsp-block-content .lsp-form .label-row-field, .jstore-tag .lsp-form .label-row-field {
+      margin: 0;
+      padding: 0 12px 0 0;
+    }
+
+    // sidebar для мобилок
+    .nav-menu,
+    .lsp-block-recommendation-wrapper,
+    .lsp-block-cart-wrapper {
+      background-color: $lessGrayColor;
+    }
+
+    .content-left-side {
+      .lsp-block-item {
+        .lsp-block-item-image {
+        }
+
+        .lsp-block-item-description {
+        }
+
+        .lsp-block-item-price {
+        }
+
+        .lsp-block-item-add-to-cart {
+        }
+      }
+
+      #lsp-block-tree {
+        margin: 0;
+        display: none;
+
+        li {
+          //text-align: center;
+          //text-transform: uppercase;
+
+          a {
+            //font-size: 24px;
+            //padding: 0;
+            //width: 100%;
+          }
+
+          ul {
+            li {
+              //border: 1px solid $lessGrayColor;
+              //margin: 2px 10px;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+  .nav-menu {
+    background-color: $whiteColor;
+    margin-bottom: 10px;
+    position: relative;
+
+
+    #lsp-block-cart {
+      .lsp-block-cart-inner {
+        .lsp-info-message {
+          a {
+          }
+
+          span {
+          }
+        }
+
+        .lsp-block-cart-item {
+          .lsp-block-cart-item-name {
+          }
+
+          .lsp-block-cart-item-row-subname {
+          }
+        }
+      }
+
+      .lsp-info-message-bottom {
+        & span {
+        }
+      }
+    }
+
+    .lsp-block-recommendation-wrapper {
+      #lsp-block-recommendation {
+        .lsp-title {
+        }
+
+        .lsp-js-recommendation-items {
+          display: none;
+
+          .lsp-block-item {
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 520px) {
+
   #jstore-css .content-left-side #lsp-block-recommendation{
     text-align: left;
   }
