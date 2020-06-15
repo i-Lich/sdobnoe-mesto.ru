@@ -1,33 +1,3 @@
-// // проверка браузера на поддержку webp
-// function testWebP(callback) {
-//     var webP = new Image();
-//     webP.onload = webP.onerror = function () {
-//         callback(webP.height == 2);
-//     };
-//     webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-// }
-// testWebP(function (support) {
-//     if (support == true) {
-//         document.querySelector('body').classList.add('webp');
-//     }
-// });
-// // end проверка браузера на поддержку webp
-//
-// //ibg
-// function ibg(){
-//
-//     let ibg=document.querySelectorAll(".lsp-block-item-image-link");
-//     console.log(ibg);
-//     for (var i = 0; i < ibg.length; i++) {
-//         if(ibg[i].querySelector('img')){
-//             ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
-//         }
-//     }
-// }
-//
-// ibg();
-// //end ibg
-
 $(function(){
     $(".menu-more").click(function () {
         $('#lsp-block-tree').toggleClass('open');
@@ -57,15 +27,7 @@ $(function(){
 });
 
 $(function() {
-    // window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
-    // jStoreEvents.push(['pageChanged', null, function (data) {
-    //     $('.show-menu-burger').removeClass('active');
-    //     $('.jstore-block-search').removeClass('open');
-    //     $('#lsp-block-userinfo').removeClass('open');
-    //     $('#lsp-block-cart--drop').removeClass('open');
-    // }]);
-
-    $(".show-menu-burger").click(function () {
+/*    $(".show-menu-burger").click(function () {
         $('.jstore-block-search').removeClass('open');
         $('#lsp-block-userinfo').removeClass('open');
         $('#lsp-block-cart--drop').removeClass('open');
@@ -87,7 +49,7 @@ $(function() {
         $('.jstore-block-search').removeClass('open');
         $('#lsp-block-cart--drop').removeClass('open');
         $('#lsp-block-userinfo').toggleClass('open');
-    });
+    });*/
 
     function cartHeight(){
         if(document.getElementById('lsp-block-cart--drop').classList.contains('open')) {
@@ -134,10 +96,12 @@ $(function() {
             cartHeight();
         }
     };
-    //scroll к контенту при клике на кнопку "оформить заказ" <span class="icon span_depth_level_1"></span>
+
 
     window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
     jStoreEvents.push(['ready', null, function (data) {
+
+        //меню-tree
         $('.lsp-block-menu-tree>li:has(ul)').append("<span class=\"icon span_depth_level_1\"></span>");
         $('.lsp-block-menu-tree>li ul li:has(ul)').append("<span class=\"icon span_depth_level_2\"></span>");
         $(".span_depth_level_1").click(function () {
@@ -150,13 +114,22 @@ $(function() {
         $(".span_depth_level_2").click(function () {
             $(this).closest('li').find('a').eq(0).toggleClass('child-selected');
         });
+        //scroll к контенту при клике на авторизацию-вход на мобилках
+        const buttonsSignInUp = document.querySelectorAll('.lsp-block-userinfo .lsp-block-userinfo-inner a');
+        buttonsSignInUp.forEach(function(elem) {
+            elem.addEventListener("click", function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#lsp-block-content").offset().top - 120
+                }, 1000);
+            });
+        });
+        //end scroll к контенту при клике на авторизацию-вход
+        //scroll к контенту при клике на кнопку "оформить заказ" <span class="icon span_depth_level_1"></span>
         const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
-        // console.log(buttonsToOrder);
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
-                // alert('click')
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#lsp-block-content").offset().top
+                    scrollTop: $("#lsp-block-content").offset().top - 120
                 }, 1000);
             });
         });
@@ -166,6 +139,12 @@ $(function() {
 
 window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
 jStoreEvents.push(['pageChanged', null, function (data) {
+    //scroll к контенту, если изменяется на страницу поиска
+    if ((arguments[0].newPage === 'search')){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#lsp-block-content").offset().top - 160
+        }, 1000);
+    }
     $('.jstore-block-search').removeClass('open');
     $('.show-menu-burger').removeClass('active');
     $('.lsp-block-terminalinfo').removeClass('open');
