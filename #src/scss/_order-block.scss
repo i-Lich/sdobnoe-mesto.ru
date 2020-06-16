@@ -29,6 +29,18 @@
     background-color: $lessGrayColor;
   }
 }
+
+@media (max-width: 900px) {
+  #jstore-css{
+    #lsp-block-content .lsp-form .label-row.label-row-half,
+    .jstore-block .lsp-form .label-row.label-row-half,
+    .jstore-tag .lsp-form .label-row.label-row-half{
+      width: 100%;
+    }
+  }
+}
+
+
 @media (max-width: 610px) {
   #jstore-css #lsp-block-content .lsp-form .label-row-field-select:after {
     top: 28px;

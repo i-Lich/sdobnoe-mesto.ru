@@ -1160,6 +1160,14 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
   background-color: #e5e5e5;
 }
 
+@media (max-width: 900px) {
+  #jstore-css #lsp-block-content .lsp-form .label-row.label-row-half,
+  #jstore-css .jstore-block .lsp-form .label-row.label-row-half,
+  #jstore-css .jstore-tag .lsp-form .label-row.label-row-half {
+    width: 100%;
+  }
+}
+
 @media (max-width: 610px) {
   #jstore-css #lsp-block-content .lsp-form .label-row-field-select:after {
     top: 28px;
