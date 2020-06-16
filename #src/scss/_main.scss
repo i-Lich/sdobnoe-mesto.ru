@@ -1024,19 +1024,31 @@ a.all-menu{
     vertical-align: middle;
     text-align: center;
     border-radius: 50%;
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     &:hover{
       background-color: $mainColor;
-      &::after{
-        background-position: -69px 758px;
+      &::before{
+        color: $whiteColor;
       }
     }
-    &::after{
-      content: '';
-      width: 24px;
+    &::before{
+      content: '\e901';
+      width: 26px;
       height: 26px;
       display: block;
-      background: url(http://sdobnoe-mesto.ru/bitrix/templates/studiofact_getfood/images/sprite.png);
-      background-position: -9px 758px;
+      margin-left: -2px;
+      font-size: 26px;
+      color: $textColor;
     }
   }
 }
