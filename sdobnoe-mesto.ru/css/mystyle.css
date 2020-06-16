@@ -1292,7 +1292,7 @@ body.search-page .lsp-block-content .jstore-js-search-form input[type="submit"] 
 #header .login #lsp-block-userinfo--popup {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 52px;
   left: -114px;
   text-align: justify;
   background-color: #fff;
@@ -2385,11 +2385,15 @@ a.all-menu {
   #header .header .container .fr {
     flex: 1 1 auto;
   }
+  #header .header .container .fr .fr-header-wrapper {
+    display: flex;
+  }
   #header .header .search_box {
     width: auto;
   }
   #header .header .login {
     display: block;
+    margin-left: auto;
   }
   #header .header #search .search--popup {
     display: block;
@@ -2462,6 +2466,7 @@ a.all-menu {
 @media (max-width: 920px) {
   .header #small_basket_box {
     padding: 0;
+    flex-flow: 0;
     margin: 16px 49px 28px 0;
   }
   .header #small_basket_box #lsp-block-cart--header {
@@ -2508,6 +2513,9 @@ a.all-menu {
   }
   #header .header .container .fr .search_box {
     margin: 0 !important;
+  }
+  #header .header .container .fr #small_basket_box {
+    margin: 0;
   }
   #header .header .container .fr #small_basket_box .lsp-block-cart-open--drop {
     position: static;

@@ -23,6 +23,9 @@
 
             .fr{
               flex: 1 1 auto;
+              .fr-header-wrapper{
+                display: flex;
+              }
             }
           }
           .search_box{
@@ -30,6 +33,7 @@
           }
           .login{
             display: block;
+            margin-left: auto;
           }
           #search{
             .search--popup{
@@ -135,6 +139,7 @@
 @media (max-width: 920px){
   .header #small_basket_box{
     padding: 0;
+    flex-flow: 0;
     margin: 16px 49px 28px 0;
     #lsp-block-cart--header{
       padding: 0 0 0 0;
@@ -194,6 +199,7 @@
             margin: 0 !important;
           }
           #small_basket_box{
+            margin: 0;
             .lsp-block-cart-open--drop{
               position: static;
             }

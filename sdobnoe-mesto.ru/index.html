@@ -293,38 +293,40 @@
 															</div>
 						</div>
 						<div class="fr">
-							<div class="login">
-								<div id="lsp-block-userinfo--popup" class="lsp-block-userinfo"></div>
-							</div>
-							<div class="search_box fl">
-								<div id="search" class="bx_search_container">
-									<div class="search--popup">
-										<div class="search-open--popup">
-											<svg class="i-icon">
-												<use xlink:href="#svg-icon-search"></use>
-											</svg>
+							<div class="fr-header-wrapper">
+								<div class="login">
+									<div id="lsp-block-userinfo--popup" class="lsp-block-userinfo"></div>
+								</div>
+								<div class="search_box fl">
+									<div id="search" class="bx_search_container">
+										<div class="search--popup">
+											<div class="search-open--popup">
+												<svg class="i-icon">
+													<use xlink:href="#svg-icon-search"></use>
+												</svg>
+											</div>
+											<div id="jstore-block-search--popup" class="jstore-tag jstore-block-search"></div>
 										</div>
-										<div id="jstore-block-search--popup" class="jstore-tag jstore-block-search"></div>
+										<div id="jstore-block-search--desktop" class="jstore-tag jstore-block-search"></div>
+
 									</div>
-									<div id="jstore-block-search--desktop" class="jstore-tag jstore-block-search"></div>
+	<script>
+		BX.ready(function(){
+			new JCTitleSearchCustom({
+				'AJAX_PAGE' : '/delivery/',
+				'CONTAINER_ID': 'search',
+				'INPUT_ID': 'title-search-input',
+				'MIN_QUERY_LEN': 2
+			});
+		});
+	</script>
 
 								</div>
-<script>
-	BX.ready(function(){
-        new JCTitleSearchCustom({
-			'AJAX_PAGE' : '/delivery/',
-			'CONTAINER_ID': 'search',
-			'INPUT_ID': 'title-search-input',
-			'MIN_QUERY_LEN': 2
-		});
-	});
-</script>
-
-							</div>
-							<div id="small_basket_box" class="fr" data-path="/include/buy_one_click.php">
-								<div class="lsp-block-cart-open--drop"></div>
-								<div id="lsp-block-cart--header" class="lsp-block-cart"></div>
-								<div id="lsp-block-cart--drop" class="lsp-block-cart"></div>
+								<div id="small_basket_box" data-path="/include/buy_one_click.php">
+									<div class="lsp-block-cart-open--drop"></div>
+									<div id="lsp-block-cart--header" class="lsp-block-cart"></div>
+									<div id="lsp-block-cart--drop" class="lsp-block-cart"></div>
+								</div>
 							</div>
 						</div>
 						<div class="clear"></div>
