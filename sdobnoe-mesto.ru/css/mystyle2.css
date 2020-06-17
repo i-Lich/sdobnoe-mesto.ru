@@ -2865,6 +2865,13 @@ a.all-menu {
   }
 }
 
+@media (max-width: 425px) {
+  header#header #small_basket_box #lsp-block-cart--drop {
+    right: -8px;
+    width: 99vw;
+  }
+}
+
 @media (max-width: 400px) {
   #jstore-css .content-left-side .lsp-block-terminalinfo .lsp-block-restinfo-inner .city-terminal-c {
     font-size: 16px;
