@@ -128,6 +128,8 @@ $(function() {
         const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
+                $('#lsp-block-cart--drop').removeClass('open');
+                $('.lsp-cart-items-list').removeClass('open');
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $("#lsp-block-content").offset().top - 120
                 }, 500);
