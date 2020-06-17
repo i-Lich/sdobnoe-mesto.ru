@@ -903,8 +903,16 @@ textarea {
   /* 2 */
 }
 
-#jstore-css textarea, #jstore-css input {
-  -webkit-appearance: auto;
+#jstore-css textarea {
+  -webkit-appearance: textarea;
+}
+
+#jstore-css input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+#jstore-css input[type="checkbox"] {
+  -webkit-appearance: checkbox;
 }
 
 /* Interactive
