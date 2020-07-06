@@ -140,12 +140,13 @@
   .header #small_basket_box{
     padding: 0;
     flex-flow: 0;
-    margin: 16px 49px 28px 0;
+    margin: 4px 49px 28px 0;
     #lsp-block-cart--header{
       padding: 0 0 0 0;
       position: static;
       width: 0;
       height: 0;
+
       .lsp-block-cart-inner .lsp-info-message .jstore-js-cart-total-count {
         display: block;
         top: 0;
@@ -159,16 +160,18 @@
     .lsp-block-cart-open--drop{
       width: 40px;
       height: 40px;
-      position: static;
+      top: 14px;
+      //position: static;
     }
     &:hover{
       background-color: $transparent;
-    }
     }
     &::after,
     &::before{
       display: none;
     }
+    }
+
     //&:hover{
     //  background-color: $transparent;
     //}
@@ -209,7 +212,11 @@
             #lsp-block-cart--header{
               .lsp-block-cart-total{
                 top: 0;
-                left: 0;
+                right: 0;
+                left: auto;
+              }
+              .lsp-block-cart-inner{
+                position: absolute;
               }
             }
           }
@@ -217,11 +224,42 @@
       }
     }
   }
+
+  .owl-carousel.main_banner_big {
+    display: block !important;
+    .owl-nav{
+      .owl-prev{
+        left: -25%;
+      }
+      .owl-next{
+        left: 25%;
+      }
+    }
+  }
+
   #jstore-css .container{
     max-width: none;
   }
-
+  #jstore-css{
+    .content{
+      #main_block_page{
+        padding: 0;
+      }
+    }
+    .left_side_container{
+      #left_side{
+        display: block;
+        width: auto;
+      }
+    }
+  }
   #jstore-css .content-left-side {
+    .nav-menu{
+      .all-menu{
+        font-style: italic;
+      }
+    }
+
     #lsp-block-tree,
     .lsp-js-recommendation-items,
     .lsp-cart-items-list,
@@ -498,7 +536,7 @@
 
     .content-right-side {
       padding: 0;
-      margin: 20px 0 0 0;
+      margin: 0 0 0 0;
 
       #lsp-block-content .lsp-js-block-items .lsp-block-item {
         flex: 0 1 100%

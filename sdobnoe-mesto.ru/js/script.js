@@ -101,6 +101,18 @@ $(function() {
     window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
     jStoreEvents.push(['ready', null, function (data) {
 
+        //маргины доп блоков
+        // console.log($('.lsp-block-gift-wrapper').height());
+        if( $('.lsp-block-gift-wrapper').height() === 0 ) {
+            $('.lsp-block-gift-wrapper').css('margin', '0');
+        }
+        if( $('.lsp-block-happy-hour-wrapper').height() === 0 ) {
+            $('.lsp-block-happy-hour-wrapper').css('margin', '0');
+        }
+        if( $('.lsp-block-recommendation-wrapper').height() === 0 ) {
+            $('.lsp-block-recommendation-wrapper').css('margin', '0');
+        }
+
         //меню-tree
         $('.lsp-block-menu-tree>li:has(ul)').append("<span class=\"icon span_depth_level_1\"></span>");
         $('.lsp-block-menu-tree>li ul li:has(ul)').append("<span class=\"icon span_depth_level_2\"></span>");
@@ -126,6 +138,7 @@ $(function() {
         //end scroll к контенту при клике на авторизацию-вход
         //scroll к контенту при клике на кнопку "оформить заказ"
         const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
+        console.log(buttonsToOrder);
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
                 $('#lsp-block-cart--drop').removeClass('open');

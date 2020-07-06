@@ -1,6 +1,5 @@
 body{
   background: $bgColor;
-  padding-top: 50px !important;
   &.search-page {
     padding: 0;
     margin: 0;
@@ -44,12 +43,34 @@ body{
     }
     }
   }
+
+}
+
+footer .socials a.soc.ok img {
+  width: 50px;
+  height: 50px;
+  background: #ee8208;
+  display: block;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .main #jstore-css{
   #left_side{
     background: none;
   }
+}
+
+footer{
+  .socials{
+    ul.socials-icons{
+
+    }
+  }
+}
+
+a.scroll-to-top{
+  z-index: 245;
 }
 
 @media screen and (max-width: 1020px){
@@ -111,9 +132,6 @@ body{
   footer{
     padding: 0 40px;
     text-align: center;
-    #bx-composite-banner{
-      display: none;
-    }
   }
 }
 @media (max-width: 460px) {
